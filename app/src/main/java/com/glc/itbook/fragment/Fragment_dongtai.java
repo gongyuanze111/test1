@@ -15,11 +15,14 @@ import androidx.fragment.app.Fragment;
 import com.glc.itbook.AddActivity;
 import com.glc.itbook.BookActivity;
 import com.glc.itbook.R;
+import com.glc.itbook.TimeActivity;
 import com.glc.itbook.UpdateActity;
 
 public class Fragment_dongtai extends Fragment {
     private LinearLayout addBook;
+    private LinearLayout addLesson;
     private LinearLayout updateBook;
+    private LinearLayout updateLesson;
     private String username;
     @Nullable
     @Override
@@ -31,14 +34,16 @@ public class Fragment_dongtai extends Fragment {
     public void onViewCreated(@NonNull View view, @Nullable Bundle savedInstanceState) {
         super.onViewCreated(view, savedInstanceState);
         addBook=view.findViewById(R.id.ly_addBook);
+        addLesson=view.findViewById(R.id.ly_addLesson);
         updateBook=view.findViewById(R.id.ly_updateBook);
+        updateLesson=view.findViewById(R.id.ly_addLesson);
 
         username = getArguments().getString("username");
 
         addBook.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-                startActivity(new Intent(getActivity(), BookActivity.class));
+                startActivity(new Intent(getActivity(), TimeActivity.class));
             }
         });
 
