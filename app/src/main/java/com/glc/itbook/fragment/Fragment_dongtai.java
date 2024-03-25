@@ -6,6 +6,7 @@ import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
 import android.widget.LinearLayout;
+import android.widget.ListView;
 import android.widget.Toast;
 
 import androidx.annotation.NonNull;
@@ -14,6 +15,7 @@ import androidx.fragment.app.Fragment;
 
 import com.glc.itbook.AddActivity;
 import com.glc.itbook.BookActivity;
+import com.glc.itbook.LessonActivity;
 import com.glc.itbook.R;
 import com.glc.itbook.TimeActivity;
 import com.glc.itbook.UpdateActity;
@@ -46,7 +48,12 @@ public class Fragment_dongtai extends Fragment {
                 startActivity(new Intent(getActivity(), TimeActivity.class));
             }
         });
-
+        addLesson.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                startActivity(new Intent(getActivity(), LessonActivity.class));
+            }
+        });
         updateBook.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {

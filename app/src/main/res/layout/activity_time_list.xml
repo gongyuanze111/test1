@@ -96,6 +96,7 @@
                     android:layout_height="wrap_content"
                     android:gravity="center"
                     android:text="15:00"
+                    android:id="@+id/time_1500"
                     android:background="@drawable/blue_border"
                     android:padding="8dp"/>
 
