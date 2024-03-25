@@ -78,7 +78,7 @@
                 android:layout_marginTop="10dp"
                 android:layout_marginBottom="5dp"></View>
             <EditText
-                android:id="@+id/edt_register_address"
+                android:id="@+id/edt_register_role"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:background="@null"
@@ -88,8 +88,48 @@
                 android:layout_marginLeft="50dp"
                 android:textColor="#9F9FA0"
                 android:textColorHint="#9F9FA0"
-                android:hint="地址"/>
-
+                android:hint="身份"/>
+            <View
+                android:layout_width="match_parent"
+                android:layout_height="1dip"
+                android:background="#83738F"
+                android:layout_marginRight="40dp"
+                android:layout_marginLeft="40dp"
+                android:layout_marginTop="10dp"
+                android:layout_marginBottom="5dp"></View>
+            <EditText
+                android:id="@+id/edt_register_age"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:background="@null"
+                android:singleLine="true"
+                android:layout_gravity="center"
+                android:layout_marginRight="50dp"
+                android:layout_marginLeft="50dp"
+                android:textColor="#9F9FA0"
+                android:textColorHint="#9F9FA0"
+                android:hint="年龄"/>
+            <View
+                android:layout_width="match_parent"
+                android:layout_height="1dip"
+                android:background="#83738F"
+                android:layout_marginRight="40dp"
+                android:layout_marginLeft="40dp"
+                android:layout_marginTop="10dp"
+                android:layout_marginBottom="5dp"></View>
+            <EditText
+                android:id="@+id/edt_register_gender"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:background="@null"
+                android:layout_gravity="center"
+                android:singleLine="true"
+                android:layout_marginRight="50dp"
+                android:layout_marginLeft="50dp"
+                android:textColor="#9F9FA0"
+                android:textColorHint="#9F9FA0"
+                android:maxLength="11"
+                android:hint="性别"/>
             <View
                 android:layout_width="match_parent"
                 android:layout_height="1dip"
