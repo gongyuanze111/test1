@@ -13,13 +13,14 @@ import androidx.annotation.Nullable;
 import androidx.fragment.app.Fragment;
 
 import com.glc.itbook.AddActivity;
+import com.glc.itbook.BookActivity;
 import com.glc.itbook.R;
 import com.glc.itbook.UpdateActity;
 
 public class Fragment_dongtai extends Fragment {
-private LinearLayout addBook;
-private LinearLayout updateBook;
- private String username;
+    private LinearLayout addBook;
+    private LinearLayout updateBook;
+    private String username;
     @Nullable
     @Override
     public View onCreateView(@NonNull LayoutInflater inflater, @Nullable ViewGroup container, @Nullable Bundle savedInstanceState) {
@@ -32,12 +33,12 @@ private LinearLayout updateBook;
         addBook=view.findViewById(R.id.ly_addBook);
         updateBook=view.findViewById(R.id.ly_updateBook);
 
-         username = getArguments().getString("username");
+        username = getArguments().getString("username");
 
         addBook.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-                startActivity(new Intent(getActivity(), AddActivity.class));
+                startActivity(new Intent(getActivity(), BookActivity.class));
             }
         });
 

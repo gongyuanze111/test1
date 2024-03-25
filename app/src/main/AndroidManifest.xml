@@ -23,6 +23,8 @@
             android:required="false" />
 
         <activity android:name=".RegistActivity" />
+        <activity android:name=".BookActivity"/>
+        <activity android:name=".AddCoachActivity"/>
         <activity android:name=".LoginActivity">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
