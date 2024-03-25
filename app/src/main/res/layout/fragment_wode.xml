@@ -37,12 +37,12 @@
                 android:textColor="@android:color/white"
                 android:textSize="17sp" />
             <TextView
-                android:id="@+id/user_level"
+                android:id="@+id/user_val"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:layout_marginLeft="15dp"
                 android:layout_toRightOf="@id/user_line"
-                android:text="会员等级"
+                android:text="182****5882"
                 android:textColor="@android:color/white"
                 android:textSize="17sp" />
         </RelativeLayout>
@@ -60,11 +60,11 @@
             android:orientation="horizontal"
             android:layout_height="60dp">
             <de.hdodenhof.circleimageview.CircleImageView
-                android:src="@drawable/me"
+                android:src="@drawable/me1"
                 android:layout_width="60dp"
                 android:layout_height="match_parent" />
             <TextView
-                android:text="个人信息"
+                android:text="用户名"
                 android:textSize="20dp"
                 android:textColor="#fff"
                 android:layout_weight="1"
@@ -90,11 +90,11 @@
             android:orientation="horizontal"
             android:layout_height="60dp">
             <de.hdodenhof.circleimageview.CircleImageView
-                android:src="@drawable/sign"
+                android:src="@drawable/mima"
                 android:layout_width="60dp"
                 android:layout_height="match_parent" />
             <TextView
-                android:text="签到"
+                android:text="修改密码"
                 android:textSize="20dp"
                 android:textColor="#fff"
                 android:layout_weight="1"
@@ -120,11 +120,11 @@
             android:orientation="horizontal"
             android:layout_height="60dp">
             <de.hdodenhof.circleimageview.CircleImageView
-                android:src="@drawable/dumbbell"
+                android:src="@drawable/dianhua"
                 android:layout_width="60dp"
                 android:layout_height="match_parent" />
             <TextView
-                android:text="我的预约"
+                android:text="电话"
                 android:textColor="#ffff"
                 android:textSize="20dp"
                 android:layout_weight="1"
@@ -138,31 +138,6 @@
                 android:layout_width="60dp"
                 android:src="@drawable/youjiantou"
                 android:layout_height="wrap_content" />
-        </LinearLayout>
-        <LinearLayout
-            android:layout_width="match_parent"
-            android:orientation="horizontal"
-            android:layout_height="60dp">
-            <de.hdodenhof.circleimageview.CircleImageView
-                android:src="@drawable/sport_course"
-                android:layout_width="60dp"
-                android:layout_height="match_parent" />
-            <TextView
-                android:text="我的课程"
-                android:textColor="#ffff"
-                android:textSize="20dp"
-                android:layout_weight="1"
-                android:layout_marginLeft="12dp"
-                android:gravity="center_vertical"
-                android:layout_width="wrap_content"
-                android:layout_height="match_parent" />
-            <ImageView
-                android:layout_gravity="center_vertical"
-                android:paddingRight="20dp"
-                android:layout_width="60dp"
-                android:src="@drawable/youjiantou"
-                android:layout_height="wrap_content" />
-
         </LinearLayout>
         <View
             android:layout_width="match_parent"
@@ -176,11 +151,11 @@
             android:orientation="horizontal"
             android:layout_height="60dp">
             <de.hdodenhof.circleimageview.CircleImageView
-                android:src="@drawable/banben1"
+                android:src="@drawable/banben"
                 android:layout_width="60dp"
                 android:layout_height="match_parent" />
             <TextView
-                android:text="提醒"
+                android:text="版本"
                 android:textSize="20dp"
                 android:textColor="#ffff"
                 android:layout_weight="1"

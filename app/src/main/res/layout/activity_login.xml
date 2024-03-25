@@ -23,7 +23,7 @@
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:layout_gravity="center"
-                android:text="欢迎使用健身房会员预约管理系统"
+                android:text="欢迎登录IT图书系统"
                 android:textColor="#FFFFFF"
                 android:textSize="18sp" />
         </LinearLayout>

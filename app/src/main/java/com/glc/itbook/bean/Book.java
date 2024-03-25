@@ -14,6 +14,9 @@ public class Book {
      */
 
     private int currentPage;
+    private int pageSize;
+    private int totalNum;
+    private int isMore;
     private int totalPage;
     private List<ItemsBean> items;
 
@@ -21,12 +24,48 @@ public class Book {
         return currentPage;
     }
 
+    public void setCurrentPage(int currentPage) {
+        this.currentPage = currentPage;
+    }
+
+    public int getPageSize() {
+        return pageSize;
+    }
+
+    public void setPageSize(int pageSize) {
+        this.pageSize = pageSize;
+    }
+
+    public int getTotalNum() {
+        return totalNum;
+    }
+
+    public void setTotalNum(int totalNum) {
+        this.totalNum = totalNum;
+    }
+
+    public int getIsMore() {
+        return isMore;
+    }
+
+    public void setIsMore(int isMore) {
+        this.isMore = isMore;
+    }
+
     public int getTotalPage() {
         return totalPage;
     }
 
+    public void setTotalPage(int totalPage) {
+        this.totalPage = totalPage;
+    }
+
     public List<ItemsBean> getItems() {
         return items;
+    }
+
+    public void setItems(List<ItemsBean> items) {
+        this.items = items;
     }
 
     public static class ItemsBean {
@@ -60,20 +99,48 @@ public class Book {
             return book_name;
         }
 
+        public void setBook_name(String book_name) {
+            this.book_name = book_name;
+        }
+
         public String getBook_img() {
             return book_img;
+        }
+
+        public void setBook_img(String book_img) {
+            this.book_img = book_img;
         }
 
         public String getBook_author() {
             return book_author;
         }
 
+        public void setBook_author(String book_author) {
+            this.book_author = book_author;
+        }
+
         public String getBook_info() {
             return book_info;
         }
 
+        public void setBook_info(String book_info) {
+            this.book_info = book_info;
+        }
+
         public String getBook_download() {
             return book_download;
+        }
+
+        public void setBook_download(String book_download) {
+            this.book_download = book_download;
+        }
+
+        public String getBook_FileSize() {
+            return book_FileSize;
+        }
+
+        public void setBook_FileSize(String book_FileSize) {
+            this.book_FileSize = book_FileSize;
         }
     }
 }

@@ -24,9 +24,7 @@ import org.json.JSONObject;
 public class RegistActivity extends AppCompatActivity {
 private EditText edt_username;
 private EditText edt_password;
-private EditText edt_role;
-private EditText edt_age;
-private EditText edt_gender;
+private EditText edt_address;
 private EditText edt_phone;
 private Button goLogin;
 private Button submit;
@@ -36,9 +34,7 @@ private Button submit;
         setContentView(R.layout.activity_regist);
         edt_username=findViewById(R.id.edt_register_username);
         edt_password=findViewById(R.id.edt_register_password);
-        edt_role=findViewById(R.id.edt_register_role);
-        edt_age=findViewById(R.id.edt_register_age);
-        edt_gender=findViewById(R.id.edt_register_gender);
+        edt_address=findViewById(R.id.edt_register_address);
         edt_phone=findViewById(R.id.edt_register_phone);
         goLogin=findViewById(R.id.btn_goLogin);
         submit=findViewById(R.id.btn_submit);
@@ -51,20 +47,16 @@ private Button submit;
             public void onClick(View view) {
                 String username = edt_username.getText().toString().trim();
                 String password = edt_password.getText().toString().trim();
-                String role = edt_role.getText().toString().trim();
-                int age = Integer.parseInt(edt_age.getText().toString().trim());
-                String gender = edt_gender.getText().toString().trim();
+                String address = edt_address.getText().toString().trim();
                 String phone = edt_phone.getText().toString().trim();
-                if(username.isEmpty() || password.isEmpty() || role.isEmpty() || age == 0 || gender.isEmpty() ||  phone.isEmpty()){
+                if(username.equals("")||password.equals("")||address.equals("")||phone.equals("")){
                     Toast.makeText(RegistActivity.this, "请填写完整", Toast.LENGTH_SHORT).show();
                 }else {
                     JSONObject jsonObject=new JSONObject();
                     try {
                         jsonObject.put("username",username);
                         jsonObject.put("password",password);
-                        jsonObject.put("role",role);
-                        jsonObject.put("age",age);
-                        jsonObject.put("gender",gender);
+                        jsonObject.put("address",address);
                         jsonObject.put("phone",phone);
                     } catch (JSONException e) {
                         e.printStackTrace();

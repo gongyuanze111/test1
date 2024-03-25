@@ -33,7 +33,7 @@ private TextView lianGao;
                 //intent 动作
                 intent.setAction("android.intent.action.VIEW");
                 //打开的网址
-                intent.setData(Uri.parse("https://me.csd.net/weixin_43912367"));
+                intent.setData(Uri.parse("https://me.csdn.net/weixin_43912367"));
                 startActivity(intent);
             }
         });
