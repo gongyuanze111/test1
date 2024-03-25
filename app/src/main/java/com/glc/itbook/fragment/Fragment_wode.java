@@ -46,7 +46,7 @@ public class Fragment_wode extends Fragment {
         hBack=view.findViewById(R.id.h_back);
         hHead=view.findViewById(R.id.h_head);
         muser_name=view.findViewById(R.id.user_name);
-        muser_val=view.findViewById(R.id.user_val);
+        muser_val=view.findViewById(R.id.user_level);
         tuichu=view.findViewById(R.id.btn_tuichudenglu);
         lyBanben=view.findViewById(R.id.ly_banben);
         tuichu.setOnClickListener(new View.OnClickListener() {

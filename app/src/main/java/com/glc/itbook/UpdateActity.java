@@ -189,9 +189,9 @@ public class UpdateActity extends AppCompatActivity {
                         TextView info = view.findViewById(R.id.item_bookInfo);
                         TextView update = view.findViewById(R.id.item_bookUpdate);
                         final TextView delete = view.findViewById(R.id.item_bookDelete);
-                        name.setText("书名:"+book.getItems().get(i).getBook_name());
-                        user.setText("作者:"+book.getItems().get(i).getBook_author());
-                        info.setText("简介:"+book.getItems().get(i).getBook_info());
+                        name.setText("标题:"+book.getItems().get(i).getBook_name());
+                        user.setText("用户:"+book.getItems().get(i).getBook_author());
+                        info.setText("内容:"+book.getItems().get(i).getBook_info());
                         update.setOnClickListener(new View.OnClickListener() {
                             @Override
                             public void onClick(View view) {

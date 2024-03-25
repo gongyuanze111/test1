@@ -33,10 +33,10 @@ private ImageView imgXiangqing;
         String jianjieStr= intent.getStringExtra("jianjie");
         down = intent.getStringExtra("down");
         String imgStr = intent.getStringExtra("img");
-        shuming.setText("书名："+name);
-        zuozhe.setText("作者："+author);
-        jianjie.setText("简介："+jianjieStr);
-        liulanqi.setText("下载链接："+down);
+        shuming.setText("标题："+name);
+        zuozhe.setText("用户："+author);
+        jianjie.setText("内容："+jianjieStr);
+        liulanqi.setText("链接："+down);
         Glide.with(XiangQingActivity.this).load(imgStr).into(imgXiangqing);
         liulanqi.setOnClickListener(new View.OnClickListener() {
             @Override

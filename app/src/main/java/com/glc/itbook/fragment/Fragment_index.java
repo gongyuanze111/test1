@@ -188,9 +188,9 @@ public class Fragment_index extends Fragment {
                         final TextView user = view.findViewById(R.id.item_bookUser);
                         TextView info = view.findViewById(R.id.item_bookInfo);
                         TextView down = view.findViewById(R.id.item_bookDown);
-                        name.setText("书名:"+book.getItems().get(i).getBook_name());
-                        user.setText("作者:"+book.getItems().get(i).getBook_author());
-                        info.setText("简介:"+book.getItems().get(i).getBook_info());
+                        name.setText("标题:"+book.getItems().get(i).getBook_name());
+                        user.setText("用户:"+book.getItems().get(i).getBook_author());
+                        info.setText("内容:"+book.getItems().get(i).getBook_info());
 
                         mlistView.setOnItemClickListener(new AdapterView.OnItemClickListener() {
                             @Override
