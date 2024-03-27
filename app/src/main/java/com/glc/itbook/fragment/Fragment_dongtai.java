@@ -19,6 +19,7 @@ import com.glc.itbook.LessonActivity;
 import com.glc.itbook.R;
 import com.glc.itbook.TimeActivity;
 import com.glc.itbook.UpdateActity;
+import com.glc.itbook.UpdateItemActivity;
 
 public class Fragment_dongtai extends Fragment {
     private LinearLayout addBook;
@@ -31,6 +32,7 @@ public class Fragment_dongtai extends Fragment {
     private LinearLayout ly_checkNum;
     private LinearLayout ly_deleteMember;
     private LinearLayout ly_deleteCoach;
+    private LinearLayout ly_deleteComment;
     private LinearLayout ly_book;
 
 
@@ -55,7 +57,7 @@ public class Fragment_dongtai extends Fragment {
         addBook=view.findViewById(R.id.ly_addBook);
         addLesson=view.findViewById(R.id.ly_addLesson);
         updateBook=view.findViewById(R.id.ly_updateBook);
-        updateLesson=view.findViewById(R.id.ly_addLesson);
+        updateLesson=view.findViewById(R.id.ly_updateLesson);
 
 
         addBook.setOnClickListener(new View.OnClickListener() {
@@ -77,11 +79,32 @@ public class Fragment_dongtai extends Fragment {
                     startActivity(new Intent(getActivity(), UpdateActity.class));
 
                 }else {
-                    Toast.makeText(getActivity(), "对不起您未有该权限，请联系管理员", Toast.LENGTH_SHORT).show();
+                    startActivity(new Intent(getActivity(), UpdateItemActivity.class));
+//                    Toast.makeText(getActivity(), "对不起您未有该权限，请联系管理员", Toast.LENGTH_SHORT).show();
 
 
                 }
             }
         });
+        updateLesson.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                startActivity(new Intent(getActivity(), LessonActivity.class));
+            }
+        });
+//        ly_deleteComment.setOnClickListener(new View.OnClickListener() {
+//            @Override
+//            public void onClick(View view) {
+//                if(username.equals("admin")){
+//                    startActivity(new Intent(getActivity(), UpdateActity.class));
+//
+//                }else {
+//                    startActivity(new Intent(getActivity(), UpdateActity.class));
+////                    Toast.makeText(getActivity(), "对不起您未有该权限，请联系管理员", Toast.LENGTH_SHORT).show();
+//
+//
+//                }
+//            }
+//        });
     }
 }
