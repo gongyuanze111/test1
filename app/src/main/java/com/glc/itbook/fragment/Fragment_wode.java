@@ -20,6 +20,8 @@ import com.bumptech.glide.Glide;
 import com.bumptech.glide.load.resource.bitmap.CenterCrop;
 import com.glc.itbook.BanBenActivity;
 import com.glc.itbook.LoginActivity;
+import com.glc.itbook.MenuActivity;
+import com.glc.itbook.MessageActivity;
 import com.glc.itbook.R;
 
 import jp.wasabeef.glide.transformations.BlurTransformation;
@@ -33,7 +35,12 @@ public class Fragment_wode extends Fragment {
     private TextView muser_val;
     private Button tuichu;
 
+    private LinearLayout info;
+    private LinearLayout sign;
+    private LinearLayout book;
+    private LinearLayout lesson;
     private LinearLayout lyBanben;
+    private LinearLayout message;
     @Nullable
     @Override
     public View onCreateView(@NonNull LayoutInflater inflater, @Nullable ViewGroup container, @Nullable Bundle savedInstanceState) {
@@ -49,6 +56,7 @@ public class Fragment_wode extends Fragment {
         muser_val=view.findViewById(R.id.user_level);
         tuichu=view.findViewById(R.id.btn_tuichudenglu);
         lyBanben=view.findViewById(R.id.ly_banben);
+        message=view.findViewById(R.id.ly_send_message);
         tuichu.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
@@ -57,6 +65,12 @@ public class Fragment_wode extends Fragment {
                 editor.clear();
                 editor.commit();
                 startActivity(new Intent(getActivity(), LoginActivity.class));
+            }
+        });
+        message.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                startActivity(new Intent(getActivity(), MessageActivity.class));
             }
         });
 

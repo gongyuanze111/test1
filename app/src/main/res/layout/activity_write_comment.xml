@@ -39,7 +39,7 @@
                 android:text="标题："
                 android:textSize="20sp"/>
             <EditText
-                android:id="@+id/edt_addBookName"
+                android:id="@+id/edt_addTitle"
                 android:layout_width="match_parent"
                 android:layout_height="match_parent"
                 android:textColorHint="#BFBFBF"
@@ -50,7 +50,7 @@
 
         <LinearLayout
             android:layout_width="match_parent"
-            android:layout_height="200dp"
+            android:layout_height="150dp"
             android:layout_marginTop="50dp">
             <TextView
                 android:layout_width="wrap_content"
@@ -59,7 +59,7 @@
                 android:text="内容："
                 android:textSize="20sp"/>
             <EditText
-                android:id="@+id/edt_addBookInfo"
+                android:id="@+id/edt_addInfo"
                 android:layout_width="match_parent"
                 android:layout_height="match_parent"
                 android:textColorHint="#BFBFBF"
@@ -80,11 +80,32 @@
                 android:text="图片："
                 android:textSize="20sp"/>
             <EditText
-                android:id="@+id/edt_addBookLianjie"
+                android:id="@+id/edt_addImg"
                 android:layout_width="match_parent"
                 android:layout_height="match_parent"
                 android:textColorHint="#BFBFBF"
                 android:hint="请上传图片"
+                android:textColor="#000"
+
+                android:background="@drawable/bg_edit"/>
+        </LinearLayout>
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="70dp"
+            android:layout_marginTop="50dp"
+            >
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="match_parent"
+                android:gravity="center"
+                android:text="链接："
+                android:textSize="20sp"/>
+            <EditText
+                android:id="@+id/edt_addLianjie"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:textColorHint="#BFBFBF"
+                android:hint="请上传活动链接"
                 android:textColor="#000"
 
                 android:background="@drawable/bg_edit"/>
