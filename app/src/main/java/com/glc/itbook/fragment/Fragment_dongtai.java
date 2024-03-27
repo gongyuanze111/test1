@@ -25,22 +25,38 @@ public class Fragment_dongtai extends Fragment {
     private LinearLayout addLesson;
     private LinearLayout updateBook;
     private LinearLayout updateLesson;
+    private LinearLayout addMember;
+    private LinearLayout ly_addCoach;
+    private LinearLayout ly_checkEquipment;
+    private LinearLayout ly_checkNum;
+    private LinearLayout ly_deleteMember;
+    private LinearLayout ly_deleteCoach;
+    private LinearLayout ly_book;
+
+
     private String username;
     @Nullable
     @Override
     public View onCreateView(@NonNull LayoutInflater inflater, @Nullable ViewGroup container, @Nullable Bundle savedInstanceState) {
+        username = getArguments().getString("username");
+        if(!username.equals("q")) {
+            return inflater.inflate(R.layout.fragment_dongtai_admin, null);
+        }
         return inflater.inflate(R.layout.fragment_dongtai,null);
     }
 
     @Override
     public void onViewCreated(@NonNull View view, @Nullable Bundle savedInstanceState) {
+        username = getArguments().getString("username");
+        if (!username.equals("q")) {
+            startActivity(new Intent(getActivity(), TimeActivity.class));
+        }
         super.onViewCreated(view, savedInstanceState);
         addBook=view.findViewById(R.id.ly_addBook);
         addLesson=view.findViewById(R.id.ly_addLesson);
         updateBook=view.findViewById(R.id.ly_updateBook);
         updateLesson=view.findViewById(R.id.ly_addLesson);
 
-        username = getArguments().getString("username");
 
         addBook.setOnClickListener(new View.OnClickListener() {
             @Override

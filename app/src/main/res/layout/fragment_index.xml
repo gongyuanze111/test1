@@ -26,7 +26,7 @@
                         android:textColorHint="#BFBFBF"
                         android:padding="10dp"
                         android:textColor="#000"
-                        android:hint="请输入书名"
+                        android:hint="请输入查询信息"
                         android:singleLine="true"
                         android:layout_weight="1"/>
                     <Button

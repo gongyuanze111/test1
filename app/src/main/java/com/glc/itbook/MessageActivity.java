@@ -53,7 +53,7 @@ public class MessageActivity extends AppCompatActivity {
             public void onClick(View view) {
                 String name = addName.getText().toString();
                 String img = addimg.getText().toString();
-                String author= "1";
+                String author= "大宝";
                 String info = addInfo.getText().toString();
                 String lianjie = addLianjie.getText().toString();
                 if(name.equals("")||img.equals("")||author.equals("")||info.equals("")){
@@ -80,7 +80,7 @@ public class MessageActivity extends AppCompatActivity {
     }
     private void Add(String name,String img,String author,String info,String lianjie){
         JSONObject jsonObject=new JSONObject();
-        String url="http://10.0.2.2/item/insertItem?book_name="+name+"&book_img="+img+"&book_author="+author+"&book_info="+info+"&book_download="+lianjie+"";
+        String url="http://10.0.2.2:8085/item/insertItem?book_name="+name+"&book_img="+img+"&book_author="+author+"&book_info="+info+"&book_download="+lianjie+"";
         RequestQueue requestQueue= Volley.newRequestQueue(MessageActivity.this);
         JsonObjectRequest jsonObjectRequest=new JsonObjectRequest(Request.Method.GET, url, jsonObject, new Response.Listener<JSONObject>() {
             @Override

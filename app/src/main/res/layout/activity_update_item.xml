@@ -43,7 +43,7 @@
                 android:layout_width="match_parent"
                 android:layout_height="match_parent"
                 android:textColorHint="#BFBFBF"
-                android:hint="请输入书名"
+                android:hint="请输入查询信息"
                 android:textColor="#000"
                 android:background="@drawable/bg_edit"/>
         </LinearLayout>
