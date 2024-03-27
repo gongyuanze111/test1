@@ -20,6 +20,7 @@ import com.glc.itbook.R;
 import com.glc.itbook.TimeActivity;
 import com.glc.itbook.UpdateActity;
 import com.glc.itbook.UpdateItemActivity;
+import com.glc.itbook.UpdateLessonActivity;
 
 public class Fragment_dongtai extends Fragment {
     private LinearLayout addBook;
@@ -89,7 +90,7 @@ public class Fragment_dongtai extends Fragment {
         updateLesson.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-                startActivity(new Intent(getActivity(), LessonActivity.class));
+                startActivity(new Intent(getActivity(), UpdateLessonActivity.class));
             }
         });
 //        ly_deleteComment.setOnClickListener(new View.OnClickListener() {

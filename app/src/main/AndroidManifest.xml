@@ -14,6 +14,7 @@
         android:usesCleartextTraffic="true">
         <activity android:name=".BanBenActivity"></activity>
         <activity android:name=".UpdateItemActivity" />
+        <activity android:name=".UpdateLessonActivity" />
         <activity android:name=".UpdateActity" />
         <activity android:name=".AddActivity" />
         <activity android:name=".XiangQingActivity" />
