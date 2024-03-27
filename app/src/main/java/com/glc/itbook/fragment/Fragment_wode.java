@@ -56,6 +56,7 @@ public class Fragment_wode extends Fragment {
         muser_val=view.findViewById(R.id.user_level);
         tuichu=view.findViewById(R.id.btn_tuichudenglu);
         lyBanben=view.findViewById(R.id.ly_banben);
+        sign=view.findViewById(R.id.sign);
         message=view.findViewById(R.id.ly_send_message);
         tuichu.setOnClickListener(new View.OnClickListener() {
             @Override
@@ -74,12 +75,13 @@ public class Fragment_wode extends Fragment {
             }
         });
 
-        lyBanben.setOnClickListener(new View.OnClickListener() {
+        sign.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
                 startActivity(new Intent(getActivity(), BanBenActivity.class));
             }
         });
+
 
         String username = getArguments().getString("username");
         muser_name.setText(username);

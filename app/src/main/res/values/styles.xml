@@ -7,5 +7,11 @@
         <item name="colorPrimaryDark">@color/colorPrimaryDark</item>
         <item name="colorAccent">@color/colorAccent</item>
     </style>
+<!--    <style name="CalendarDateTextAppearance" parent="@android:style/TextAppearance.Small">-->
+<!--        <item name="android:dateTextAppearance">@style/CalendarDateTextAppearance</item>-->
+<!--    </style>-->
 
+<!--    <style name="CalendarDateTextAppearance">-->
+<!--        <item name="android:calendarViewMode">SHOW_DATE</item>-->
+<!--    </style>-->
 </resources>
