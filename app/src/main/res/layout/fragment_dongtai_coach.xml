@@ -8,25 +8,9 @@
         android:layout_height="match_parent"
         android:orientation="vertical"
         android:gravity="center">
+
         <LinearLayout
-            android:id="@+id/ly_addBook"
-            android:layout_width="wrap_content"
-            android:layout_marginBottom="20dp"
-            android:layout_height="60dp">
-            <ImageView
-                android:layout_width="60dp"
-                android:layout_height="match_parent"
-                android:src="@drawable/add"/>
-            <TextView
-                android:layout_width="wrap_content"
-                android:layout_height="60dp"
-                android:gravity="center"
-                android:background="@drawable/buttonstyle"
-                android:textSize="25sp"
-                android:text="添加预约"/>
-        </LinearLayout>
-        <LinearLayout
-            android:id="@+id/ly_addLesson"
+            android:id="@+id/checkMember"
             android:layout_width="wrap_content"
             android:layout_marginBottom="20dp"
             android:layout_height="60dp">
@@ -40,46 +24,25 @@
                 android:layout_height="60dp"
                 android:background="@drawable/buttonstyle"
                 android:gravity="center"
-                android:text="添加课程"
+                android:text="查看学员"
                 android:textSize="25sp" />
         </LinearLayout>
-
         <LinearLayout
-            android:id="@+id/ly_updateBook"
+            android:id="@+id/checkLesson"
             android:layout_width="wrap_content"
-            android:layout_height="64dp"
-            android:layout_marginBottom="20dp">
-
+            android:layout_marginBottom="20dp"
+            android:layout_height="60dp">
             <ImageView
                 android:layout_width="60dp"
                 android:layout_height="match_parent"
-                android:src="@drawable/update" />
+                android:src="@drawable/lesson"/>
 
             <TextView
                 android:layout_width="wrap_content"
                 android:layout_height="60dp"
                 android:background="@drawable/buttonstyle"
                 android:gravity="center"
-                android:text="修改预约"
-                android:textSize="25sp" />
-        </LinearLayout>
-        <LinearLayout
-            android:id="@+id/ly_updateLesson"
-            android:layout_width="wrap_content"
-            android:layout_height="64dp"
-            android:layout_marginBottom="20dp">
-
-            <ImageView
-                android:layout_width="60dp"
-                android:layout_height="match_parent"
-                android:src="@drawable/updatebook" />
-
-            <TextView
-                android:layout_width="wrap_content"
-                android:layout_height="60dp"
-                android:background="@drawable/buttonstyle"
-                android:gravity="center"
-                android:text="修改课程"
+                android:text="查看课程"
                 android:textSize="25sp" />
         </LinearLayout>
 

@@ -16,6 +16,7 @@ import androidx.fragment.app.Fragment;
 import com.glc.itbook.AddActivity;
 import com.glc.itbook.AddCoachActivity;
 import com.glc.itbook.BookActivity;
+import com.glc.itbook.CheckItemActivity;
 import com.glc.itbook.LessonActivity;
 import com.glc.itbook.R;
 import com.glc.itbook.TimeActivity;
@@ -37,7 +38,8 @@ public class Fragment_dongtai extends Fragment {
     private LinearLayout ly_deleteComment;
     private LinearLayout ly_book;
 
-
+    private LinearLayout coachCheckLesson;
+    private LinearLayout coachCheckMember;
     private String username;
     private String role;
     @Nullable
@@ -82,7 +84,7 @@ public class Fragment_dongtai extends Fragment {
             ly_checkEquipment.setOnClickListener(new View.OnClickListener() {
                 @Override
                 public void onClick(View view) {
-                    startActivity(new Intent(getActivity(), TimeActivity.class));
+                    startActivity(new Intent(getActivity(), CheckItemActivity.class));
                 }
             });
             ly_checkNum.setOnClickListener(new View.OnClickListener() {
@@ -104,6 +106,16 @@ public class Fragment_dongtai extends Fragment {
                 }
             });
             ly_book.setOnClickListener(new View.OnClickListener() {
+                @Override
+                public void onClick(View view) {
+                    startActivity(new Intent(getActivity(), TimeActivity.class));
+                }
+            });
+        }
+        else if (role.equals("Coach")){
+            coachCheckLesson=view.findViewById(R.id.checkLesson);
+            coachCheckMember=view.findViewById(R.id.checkMember);
+            coachCheckLesson.setOnClickListener(new View.OnClickListener() {
                 @Override
                 public void onClick(View view) {
                     startActivity(new Intent(getActivity(), TimeActivity.class));

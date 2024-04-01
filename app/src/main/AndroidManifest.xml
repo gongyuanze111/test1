@@ -19,6 +19,7 @@
         <activity android:name=".AddActivity" />
         <activity android:name=".XiangQingActivity" />
         <activity android:name=".MessageActivity" />
+        <activity android:name=".CheckItemActivity" />
         <activity android:name=".MenuActivity"></activity> <!-- 9.0闪退 -->
         <uses-library
             android:name="org.apache.http.legacy"
