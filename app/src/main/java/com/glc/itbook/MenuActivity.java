@@ -67,6 +67,9 @@ public class MenuActivity extends AppCompatActivity {
         Bundle bundle = new Bundle();
         bundle.putString("username", username);
         bundle.putString("phone", phone);
+//        bundle.putString("role", "Member");
+//        bundle.putString("role", "Coach");
+        bundle.putString("role", "Admin");
         fragments.get(2).setArguments(bundle);
 
         fragments.get(1).setArguments(bundle);

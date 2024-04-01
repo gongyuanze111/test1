@@ -85,8 +85,9 @@ public class Fragment_wode extends Fragment {
 
         String username = getArguments().getString("username");
         muser_name.setText(username);
-        String phone = getArguments().getString("phone").replaceAll("(\\d{3})\\d{4}(\\d{4})","$1****$2");
-        muser_val.setText(phone);
+//        String phone = getArguments().getString("phone").replaceAll("(\\d{3})\\d{4}(\\d{4})","$1****$2");
+        String role = getArguments().getString("role").replaceAll("(\\d{3})\\d{4}(\\d{4})","$1****$2");
+        muser_val.setText(role);
 
         Glide.with(getActivity()).load(R.drawable.admin).bitmapTransform(new BlurTransformation(getActivity(),25),new CenterCrop(getActivity()))
                 .into(hBack);
