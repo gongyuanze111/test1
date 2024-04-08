@@ -121,6 +121,12 @@ public class Fragment_dongtai extends Fragment {
                     startActivity(new Intent(getActivity(), TimeActivity.class));
                 }
             });
+            coachCheckMember.setOnClickListener(new View.OnClickListener() {
+                @Override
+                public void onClick(View view) {
+                    startActivity(new Intent(getActivity(), TimeActivity.class));
+                }
+            });
         }
         else {
             addBook=view.findViewById(R.id.ly_addBook);

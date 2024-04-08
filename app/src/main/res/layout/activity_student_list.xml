@@ -1,0 +1,256 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+    <LinearLayout
+        android:layout_width="fill_parent"
+        android:layout_height="fill_parent"
+        android:orientation="vertical">
+
+        <LinearLayout
+            android:id="@+id/content"
+            android:layout_width="fill_parent"
+            android:layout_height="0dp"
+            android:layout_weight="1"
+            android:orientation="vertical">
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="50dp">
+                    <EditText
+                        android:id="@+id/edt_date"
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:background="@drawable/bg_edit"
+                        android:textColorHint="#BFBFBF"
+                        android:padding="10dp"
+                        android:textColor="#000"
+                        android:hint="请输入教练名称"
+                        android:singleLine="true"
+                        android:layout_weight="1"/>
+                    <Button
+                        android:id="@+id/btn_imgSousuo"
+                        android:layout_width="55sp"
+                        android:layout_height="match_parent"
+                        android:background="@drawable/sousuo"/>
+                    <TextView
+                        android:id="@+id/shuaxinshuju"
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:layout_weight="2"
+                        android:gravity="center"
+                        android:background="#0099ff"
+                        android:text="刷新数据"/>
+
+                </LinearLayout>
+
+
+<!--            <ListView-->
+<!--                android:id="@+id/menu_list"-->
+<!--                android:layout_width="match_parent"-->
+<!--                android:layout_height="match_parent"></ListView>-->
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical">
+
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:text="学员名单表"
+                    android:gravity="center"
+                    android:textSize="18sp"
+                    android:background="@drawable/buttonstyle"/>
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:orientation="vertical">
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="200dp">
+
+                        <LinearLayout
+                            android:layout_width="wrap_content"
+                            android:layout_height="match_parent"
+                            android:layout_weight="1"
+                            android:orientation="horizontal">
+
+                            <ImageView
+                                android:id="@+id/student1"
+                                android:layout_width="150dp"
+                                android:layout_height="match_parent"
+                                android:src="@drawable/student1" />
+
+                            <LinearLayout
+                                android:layout_width="match_parent"
+                                android:layout_height="match_parent"
+                                android:layout_weight="1"
+                                android:orientation="vertical">
+
+                                <TextView
+                                    android:id="@+id/item_memberName"
+                                    android:layout_width="match_parent"
+                                    android:layout_height="wrap_content"
+                                    android:ellipsize="end"
+                                    android:gravity="center_vertical"
+                                    android:maxLines="1"
+                                    android:text="张三"
+                                    android:textSize="23sp" />
+
+                                <TextView
+                                    android:id="@+id/item_memberTrain"
+                                    android:layout_width="match_parent"
+                                    android:layout_height="wrap_content"
+                                    android:ellipsize="end"
+                                    android:gravity="center_vertical"
+                                    android:text="上次训练时间：3天前"
+                                    android:textSize="23sp" />
+                                <TextView
+                                    android:id="@+id/item_beforeLesson"
+                                    android:layout_width="match_parent"
+                                    android:layout_height="wrap_content"
+                                    android:ellipsize="end"
+                                    android:gravity="center_vertical"
+                                    android:text="上次上课时间：2天前"
+                                    android:textSize="23sp" />
+                                <TextView
+                                    android:id="@+id/item_afterLesson"
+                                    android:layout_width="match_parent"
+                                    android:layout_height="wrap_content"
+                                    android:ellipsize="end"
+                                    android:gravity="center_vertical"
+                                    android:text="下次上课时间：4天后"
+                                    android:textSize="23sp" />
+
+
+
+
+                            </LinearLayout>
+                        </LinearLayout>
+                    </LinearLayout>
+
+                    <Button
+                        android:id="@+id/confirm"
+                        android:layout_width="match_parent"
+                        android:layout_height="38dp"
+                        android:layout_marginTop="16dp"
+                        android:background="@drawable/buttonstyle"
+                        android:text="联系学员"
+                        android:layout_marginBottom="50dp"
+                        android:textColor="@color/colorPrimaryDark"/>
+                </LinearLayout>
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="200dp">
+
+                        <LinearLayout
+                            android:layout_width="wrap_content"
+                            android:layout_height="match_parent"
+                            android:layout_weight="1"
+                            android:orientation="horizontal">
+
+                            <ImageView
+                                android:id="@+id/item_image2"
+                                android:layout_width="150dp"
+                                android:layout_height="match_parent"
+                                android:src="@drawable/student2" />
+
+                            <LinearLayout
+                                android:layout_width="match_parent"
+                                android:layout_height="match_parent"
+                                android:layout_weight="1"
+                                android:orientation="vertical">
+
+                                <TextView
+                                    android:id="@+id/item_member2Name"
+                                    android:layout_width="match_parent"
+                                    android:layout_height="wrap_content"
+                                    android:ellipsize="end"
+                                    android:gravity="center_vertical"
+                                    android:maxLines="1"
+                                    android:text="李四"
+                                    android:textSize="23sp" />
+
+                                <TextView
+                                    android:id="@+id/item_member2Train"
+                                    android:layout_width="match_parent"
+                                    android:layout_height="wrap_content"
+                                    android:ellipsize="end"
+                                    android:gravity="center_vertical"
+                                    android:text="上次训练时间：3天前"
+                                    android:textSize="23sp" />
+                                <TextView
+                                    android:id="@+id/item_before2Lesson"
+                                    android:layout_width="match_parent"
+                                    android:layout_height="wrap_content"
+                                    android:ellipsize="end"
+                                    android:gravity="center_vertical"
+                                    android:text="上次上课时间：2天前"
+                                    android:textSize="23sp" />
+                                <TextView
+                                    android:id="@+id/item_after2Lesson"
+                                    android:layout_width="match_parent"
+                                    android:layout_height="wrap_content"
+                                    android:ellipsize="end"
+                                    android:gravity="center_vertical"
+                                    android:text="下次上课时间：未预约"
+                                    android:textSize="23sp" />
+                            </LinearLayout>
+                        </LinearLayout>
+                    </LinearLayout>
+
+                    <Button
+                        android:id="@+id/confirm2"
+                        android:layout_width="match_parent"
+                        android:layout_height="38dp"
+                        android:layout_marginTop="16dp"
+                        android:background="@drawable/buttonstyle"
+                        android:text="联系学员"
+                        android:layout_marginBottom="50dp"
+                        android:textColor="@color/colorPrimaryDark"/>
+
+
+
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:gravity="bottom"
+            android:orientation="horizontal">
+            <TextView
+                android:id="@+id/tv_shangye"
+                android:layout_width="match_parent"
+                android:layout_height="50dp"
+                android:layout_weight="1"
+                android:gravity="center"
+                android:background="@drawable/buttonstyle"
+                android:text="上一页"/>
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_weight="0.5">
+                <TextView
+                    android:id="@+id/tv_currentPage"
+                    android:layout_width="70dp"
+                    android:layout_height="match_parent"
+                    android:gravity="center"
+                    android:layout_weight="1"
+                    android:text="第2页"/>
+            </LinearLayout>
+            <TextView
+                android:id="@+id/tv_next"
+                android:layout_width="match_parent"
+                android:layout_height="50dp"
+                android:layout_weight="1"
+                android:gravity="center"
+                android:background="@drawable/buttonstyle"
+
+                android:text="下一页"/>
+        </LinearLayout>
+    </LinearLayout>
+    </LinearLayout>
+</LinearLayout>
