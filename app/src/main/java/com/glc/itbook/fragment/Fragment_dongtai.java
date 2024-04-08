@@ -17,6 +17,8 @@ import com.glc.itbook.AddActivity;
 import com.glc.itbook.AddCoachActivity;
 import com.glc.itbook.BookActivity;
 import com.glc.itbook.CheckItemActivity;
+import com.glc.itbook.CoachCheckLessonActivity;
+import com.glc.itbook.CoachCheckMemberActivity;
 import com.glc.itbook.LessonActivity;
 import com.glc.itbook.R;
 import com.glc.itbook.TimeActivity;
@@ -118,13 +120,13 @@ public class Fragment_dongtai extends Fragment {
             coachCheckLesson.setOnClickListener(new View.OnClickListener() {
                 @Override
                 public void onClick(View view) {
-                    startActivity(new Intent(getActivity(), TimeActivity.class));
+                    startActivity(new Intent(getActivity(), CoachCheckLessonActivity.class));
                 }
             });
             coachCheckMember.setOnClickListener(new View.OnClickListener() {
                 @Override
                 public void onClick(View view) {
-                    startActivity(new Intent(getActivity(), TimeActivity.class));
+                    startActivity(new Intent(getActivity(), CoachCheckMemberActivity.class));
                 }
             });
         }

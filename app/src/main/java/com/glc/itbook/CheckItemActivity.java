@@ -62,7 +62,7 @@ public class CheckItemActivity extends AddCoachActivity{
         resistance_band_num.setText("运行情况良好");
         yoga_mat_num.setText("运行情况良好");
         machine_num = findViewById(R.id.machine_num);
-        machine_num.setText("2号机械已损坏，点击代表修复完成");
+        machine_num.setText("2号机械已损坏，修复完成后再次点击");
         btn_choose = findViewById(R.id.buttonChooseEquipment);
         machine.setVisibility(View.INVISIBLE);
         machine_clicked.setVisibility(View.VISIBLE);
