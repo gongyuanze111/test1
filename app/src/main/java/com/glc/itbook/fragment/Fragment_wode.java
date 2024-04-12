@@ -61,24 +61,26 @@ public class Fragment_wode extends Fragment {
         tuichu.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-                SharedPreferences sharedPreferences=getActivity().getSharedPreferences("data", Context.MODE_PRIVATE);
-                SharedPreferences.Editor editor=sharedPreferences.edit();
-                editor.clear();
-                editor.commit();
-                startActivity(new Intent(getActivity(), LoginActivity.class));
+            SharedPreferences sharedPreferences=getActivity().getSharedPreferences("data", Context.MODE_PRIVATE);
+            SharedPreferences.Editor editor=sharedPreferences.edit();
+            editor.clear();
+            editor.commit();
+            startActivity(new Intent(getActivity(), LoginActivity.class));
             }
         });
         message.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-                startActivity(new Intent(getActivity(), MessageActivity.class));
+            startActivity(new Intent(getActivity(), MessageActivity.class));
             }
         });
 
         sign.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-                startActivity(new Intent(getActivity(), BanBenActivity.class));
+            Intent intent = new Intent(getActivity(), BanBenActivity.class);
+            intent.putExtra("username", muser_name.getText()); // 将username放入Intent
+            startActivity(intent);
             }
         });
 
