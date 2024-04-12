@@ -63,6 +63,7 @@ public class CheckItemActivity extends AddCoachActivity{
         yoga_mat_num.setText("运行情况良好");
         machine_num = findViewById(R.id.machine_num);
         machine_num.setText("2号机械已损坏，修复完成后再次点击");
+//        bug
         btn_choose = findViewById(R.id.buttonChooseEquipment);
         machine.setVisibility(View.INVISIBLE);
         machine_clicked.setVisibility(View.VISIBLE);

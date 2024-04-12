@@ -38,7 +38,7 @@ import org.json.JSONObject;
 
 import java.io.UnsupportedEncodingException;
 import java.net.URLEncoder;
-
+// 添加课程、查看课程（面向所有人）
 public class Fragment_index extends Fragment {
     private ListView mlistView;
     private BaseAdapter adapter;

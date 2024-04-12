@@ -103,6 +103,7 @@ public class BookActivity extends AddCoachActivity{
                         try {
                             String msg = jsonObject.getString("msg");
                             if(msg.equals("预约成功")){
+                                //                功能二：闪退
                                 Toast.makeText(BookActivity.this, msg, Toast.LENGTH_SHORT).show();
                             }
                         } catch (Exception e) {

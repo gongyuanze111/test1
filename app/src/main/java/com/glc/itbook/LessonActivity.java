@@ -93,7 +93,7 @@ public class LessonActivity extends AppCompatActivity{
                     @Override
                     public void onClick(View view) {
                         Toast.makeText(LessonActivity.this, "课程预约成功", Toast.LENGTH_SHORT).show();
-
+                        confirm.setText("已预约");
                     }
                 });
             }

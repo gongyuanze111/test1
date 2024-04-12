@@ -113,6 +113,7 @@ public class Fragment_dongtai extends Fragment {
                     startActivity(new Intent(getActivity(), TimeActivity.class));
                 }
             });
+            /*功能一：发布新的课程，涵盖*/
         }
         else if (role.equals("Coach")){
             coachCheckLesson=view.findViewById(R.id.checkLesson);
