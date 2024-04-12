@@ -73,6 +73,7 @@ public class MenuActivity extends AppCompatActivity {
         fragments.get(2).setArguments(bundle);
 
         fragments.get(1).setArguments(bundle);
+        fragments.get(0).setArguments(bundle);
         vp.setOffscreenPageLimit(3);
         vp.setAdapter(new MyPageAdapter(getSupportFragmentManager()));
 

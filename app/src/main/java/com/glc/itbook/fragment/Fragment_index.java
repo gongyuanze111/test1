@@ -51,6 +51,8 @@ public class Fragment_index extends Fragment {
     private int totalPage;
     private TextView bookName;
     private Button souSuo;
+    private String role;
+    private String name;
 
 
     @Nullable
@@ -63,6 +65,25 @@ public class Fragment_index extends Fragment {
     @Override
     public void onViewCreated(@NonNull View view, @Nullable Bundle savedInstanceState) {
         super.onViewCreated(view, savedInstanceState);
+
+        role = getArguments().getString("role");
+        name = getArguments().getString("username");
+        if(role.equals("Admin")) {
+            Toast.makeText(getActivity(), "健身房有XX器材待保修，请及时查看", Toast.LENGTH_LONG).show();
+        }
+        else if (role.equals("Coach")){
+            Toast.makeText(getActivity(), "您的下一节课将于x小时x分钟后开始，请您做好准备。", Toast.LENGTH_LONG).show();
+        }
+        else {
+            if (name.equals("Member1"))
+                Toast.makeText(getActivity(), "您今日有18:00开始的预约，请及时前往健身", Toast.LENGTH_LONG).show();
+            else if (name.equals("Member2"))
+                Toast.makeText(getActivity(), "您14:20的预约即将开始，请尽快前往健身", Toast.LENGTH_LONG).show();
+            else if (name.equals("Member3"))
+                Toast.makeText(getActivity(), "您12:00的预约已过期，资源已释放，积分-3", Toast.LENGTH_LONG).show();
+            else
+                Toast.makeText(getActivity(), "您尚未开始预约，运动起来吧！", Toast.LENGTH_LONG).show();
+        }
         mlistView = view.findViewById(R.id.menu_list);
         tvNext = view.findViewById(R.id.tv_next);
         tvShangye = view.findViewById(R.id.tv_shangye);
