@@ -56,7 +56,7 @@ private Button signup;
                     });
                 } else
                     Toast.makeText(BanBenActivity.this, "签到成功！积分+1", Toast.LENGTH_SHORT).show();
-                    sign.setText("已签到");
+                sign.setText("已签到");
 
             }
         });

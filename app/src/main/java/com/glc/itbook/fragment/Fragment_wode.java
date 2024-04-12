@@ -19,6 +19,7 @@ import androidx.fragment.app.Fragment;
 import com.bumptech.glide.Glide;
 import com.bumptech.glide.load.resource.bitmap.CenterCrop;
 import com.glc.itbook.BanBenActivity;
+import com.glc.itbook.ExerciseActivity;
 import com.glc.itbook.LoginActivity;
 import com.glc.itbook.MenuActivity;
 import com.glc.itbook.MessageActivity;
@@ -89,7 +90,7 @@ public class Fragment_wode extends Fragment {
         exercise.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-                startActivity(new Intent(getActivity(), MessageActivity.class));
+                startActivity(new Intent(getActivity(), ExerciseActivity.class));
             }
         });
         String username = getArguments().getString("username");

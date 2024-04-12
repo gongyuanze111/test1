@@ -33,6 +33,7 @@
         <activity android:name=".AddCoachActivity"/>
         <activity android:name=".TimeActivity"/>
         <activity android:name=".LessonActivity"/>
+        <activity android:name=".ExerciseActivity"/>
         <activity android:name=".LoginActivity">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
