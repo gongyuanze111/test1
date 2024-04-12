@@ -29,6 +29,8 @@ import com.glc.itbook.UpdateLessonActivity;
 public class Fragment_dongtai extends Fragment {
     private LinearLayout addBook;
     private LinearLayout addLesson;
+    private LinearLayout currentBook;
+
     private LinearLayout updateBook;
     private LinearLayout updateLesson;
     private LinearLayout ly_addMember;
@@ -132,16 +134,28 @@ public class Fragment_dongtai extends Fragment {
             });
         }
         else {
+            currentBook=view.findViewById(R.id.ly_useStatus);
             addBook=view.findViewById(R.id.ly_addBook);
             addLesson=view.findViewById(R.id.ly_addLesson);
             updateBook=view.findViewById(R.id.ly_updateBook);
             updateLesson=view.findViewById(R.id.ly_updateLesson);
 
 
+            currentBook.setOnClickListener(new View.OnClickListener() {
+                @Override
+                public void onClick(View view) {
+
+                    Intent intent = new Intent(getActivity(), TimeActivity.class);
+                    intent.putExtra("time", "now");
+                    startActivity(intent);
+                }
+            });
             addBook.setOnClickListener(new View.OnClickListener() {
                 @Override
                 public void onClick(View view) {
-                    startActivity(new Intent(getActivity(), TimeActivity.class));
+                    Intent intent = new Intent(getActivity(), TimeActivity.class);
+                    intent.putExtra("time", "future");
+                    startActivity(intent);
                 }
             });
             addLesson.setOnClickListener(new View.OnClickListener() {
@@ -167,7 +181,9 @@ public class Fragment_dongtai extends Fragment {
             updateLesson.setOnClickListener(new View.OnClickListener() {
                 @Override
                 public void onClick(View view) {
-                    startActivity(new Intent(getActivity(), UpdateLessonActivity.class));
+                    Intent intent = new Intent(getActivity(), UpdateLessonActivity.class);
+//                    intent.putExtra("time", "now");
+                    startActivity(intent);
                 }
             });
         }

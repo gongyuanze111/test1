@@ -60,88 +60,97 @@ public class TimeActivity extends AppCompatActivity{
     private Button btn_choose;
     private TextView time_1420;
     private TextView time_1800;
+    private void switchToEquipmentLayout(){
+        setContentView(R.layout.activity_equipment_layout);
+        //透明状态栏          
+        getWindow().addFlags(WindowManager.LayoutParams.FLAG_TRANSLUCENT_STATUS);
+        getWindow().addFlags(WindowManager.LayoutParams.FLAG_TRANSLUCENT_NAVIGATION);
 
+        machine = findViewById(R.id.machine);
+        machine_clicked = findViewById(R.id.machine_clicked);
+        machine_num = findViewById(R.id.machine_num);
+        btn_choose = findViewById(R.id.buttonChooseEquipment);
+
+        machine.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view){
+                machine.setVisibility(View.INVISIBLE);
+                machine_clicked.setVisibility(View.VISIBLE);
+                String text = machine_num.getText().toString();
+                int currentNum = 0;
+                Pattern pattern = Pattern.compile("\\d+");
+                Matcher matcher = pattern.matcher(text);
+                if (matcher.find()) {
+                    currentNum = Integer.parseInt(matcher.group());
+                    currentNum --;
+                    machine_num.setText("剩余 " + currentNum + " 个");
+
+                }
+            };
+        });
+
+        btn_choose.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                int currentNum = 0;
+                Pattern pattern = Pattern.compile("\\d+");
+                String text = machine_num.getText().toString();
+                Matcher matcher = pattern.matcher(text);
+                currentNum = Integer.parseInt(matcher.group());
+                String url="http://10.0.2.2:8085/equipment/register";
+                JSONObject jsonObject = new JSONObject();
+                try {
+                    jsonObject.put("num", currentNum);
+                    jsonObject.put("username", "zhangsan");
+                    jsonObject.put("time", 1400);
+                    jsonObject.put("status", true);
+                } catch (JSONException e) {
+                    e.printStackTrace();
+                }
+                RequestQueue requestQueue = Volley.newRequestQueue(TimeActivity.this);
+                JsonObjectRequest jsonObjectRequest = new JsonObjectRequest(Request.Method.POST, url, jsonObject, new Response.Listener<JSONObject>() {
+                    @Override
+                    public void onResponse(JSONObject jsonObject) {
+                        try {
+                            String msg = jsonObject.getString("msg");
+                            if(msg.equals("预约成功")){
+                                Toast.makeText(TimeActivity.this, msg, Toast.LENGTH_SHORT).show();
+                            }
+                        } catch (Exception e) {
+                            e.printStackTrace();
+                        }
+                    }
+                }, new Response.ErrorListener() {
+                    @Override
+                    public void onErrorResponse(VolleyError volleyError) {
+                        Toast.makeText(TimeActivity.this, "预约出错", Toast.LENGTH_SHORT).show();
+                    }
+                });
+                requestQueue.add(jsonObjectRequest);
+            }
+        });
+
+    }
     @Override
     protected void onCreate(final Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        setContentView(R.layout.activity_time_list);
+        String time = getIntent().getStringExtra("time");
+        if (time.equals("now")) {
+            switchToEquipmentLayout();
+        }
+        else {
+            setContentView(R.layout.activity_time_list);
 //        getWindow().addFlags(WindowManager.LayoutParams.);
 //        getWindow().addFlags(WindowManager.LayoutParams.);
-        time_1420 = findViewById(R.id.time_1420);
-        time_1800 = findViewById(R.id.time_1800);
-        time_1420.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View view) {
-                setContentView(R.layout.activity_equipment_layout);
-                //透明状态栏          
-                getWindow().addFlags(WindowManager.LayoutParams.FLAG_TRANSLUCENT_STATUS);
-                getWindow().addFlags(WindowManager.LayoutParams.FLAG_TRANSLUCENT_NAVIGATION);
+            time_1420 = findViewById(R.id.time_1420);
+            time_1800 = findViewById(R.id.time_1800);
+            time_1420.setOnClickListener(new View.OnClickListener() {
+                @Override
+                public void onClick(View view) {
+                    switchToEquipmentLayout();
+                }
+            });
+        }
 
-                machine = findViewById(R.id.machine);
-                machine_clicked = findViewById(R.id.machine_clicked);
-                machine_num = findViewById(R.id.machine_num);
-                btn_choose = findViewById(R.id.buttonChooseEquipment);
-
-                machine.setOnClickListener(new View.OnClickListener() {
-                    @Override
-                    public void onClick(View view){
-                        machine.setVisibility(View.INVISIBLE);
-                        machine_clicked.setVisibility(View.VISIBLE);
-                        String text = machine_num.getText().toString();
-                        int currentNum = 0;
-                        Pattern pattern = Pattern.compile("\\d+");
-                        Matcher matcher = pattern.matcher(text);
-                        if (matcher.find()) {
-                            currentNum = Integer.parseInt(matcher.group());
-                            currentNum --;
-                            machine_num.setText("剩余 " + currentNum + " 个");
-
-                        }
-                    };
-                });
-
-                btn_choose.setOnClickListener(new View.OnClickListener() {
-                    @Override
-                    public void onClick(View view) {
-                        int currentNum = 0;
-                        Pattern pattern = Pattern.compile("\\d+");
-                        String text = machine_num.getText().toString();
-                        Matcher matcher = pattern.matcher(text);
-                        currentNum = Integer.parseInt(matcher.group());
-                        String url="http://10.0.2.2:8085/equipment/register";
-                        JSONObject jsonObject = new JSONObject();
-                        try {
-                            jsonObject.put("num", currentNum);
-                            jsonObject.put("username", "zhangsan");
-                            jsonObject.put("time", 1400);
-                            jsonObject.put("status", true);
-                        } catch (JSONException e) {
-                            e.printStackTrace();
-                        }
-                        RequestQueue requestQueue = Volley.newRequestQueue(TimeActivity.this);
-                        JsonObjectRequest jsonObjectRequest = new JsonObjectRequest(Request.Method.POST, url, jsonObject, new Response.Listener<JSONObject>() {
-                            @Override
-                            public void onResponse(JSONObject jsonObject) {
-                                try {
-                                    String msg = jsonObject.getString("msg");
-                                    if(msg.equals("预约成功")){
-                                        Toast.makeText(TimeActivity.this, msg, Toast.LENGTH_SHORT).show();
-                                    }
-                                } catch (Exception e) {
-                                    e.printStackTrace();
-                                }
-                            }
-                        }, new Response.ErrorListener() {
-                            @Override
-                            public void onErrorResponse(VolleyError volleyError) {
-                                Toast.makeText(TimeActivity.this, "预约出错", Toast.LENGTH_SHORT).show();
-                            }
-                        });
-                        requestQueue.add(jsonObjectRequest);
-                    }
-                });
-
-            }
-        });
     }
 }
