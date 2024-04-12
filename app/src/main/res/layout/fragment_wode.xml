@@ -37,10 +37,28 @@
                 android:textColor="@android:color/white"
                 android:textSize="17sp" />
             <TextView
-                android:id="@+id/user_level"
+                android:id="@+id/user_role"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:layout_marginLeft="15dp"
+                android:layout_toRightOf="@id/user_line"
+                android:text="会员身份"
+                android:textColor="@android:color/white"
+                android:textSize="17sp" />
+
+            <ImageView
+                android:id="@+id/user_line2"
+                android:layout_width="1dp"
+                android:layout_height="25dp"
+                android:layout_centerHorizontal="false"
+                android:layout_marginLeft="295dp"
+                android:background="@android:color/white" />
+
+            <TextView
+                android:id="@+id/user_level"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="100dp"
                 android:layout_toRightOf="@id/user_line"
                 android:text="会员等级"
                 android:textColor="@android:color/white"
@@ -207,6 +225,31 @@
                 android:layout_height="match_parent" />
             <TextView
                 android:text="发消息"
+                android:textSize="20dp"
+                android:textColor="#ffff"
+                android:layout_weight="1"
+                android:layout_marginLeft="12dp"
+                android:gravity="center_vertical"
+                android:layout_width="wrap_content"
+                android:layout_height="match_parent" />
+            <ImageView
+                android:layout_gravity="center_vertical"
+                android:paddingRight="20dp"
+                android:layout_width="60dp"
+                android:src="@drawable/youjiantou"
+                android:layout_height="wrap_content" />
+        </LinearLayout>
+        <LinearLayout
+            android:id="@+id/ly_exercise"
+            android:layout_width="match_parent"
+            android:orientation="horizontal"
+            android:layout_height="60dp">
+            <de.hdodenhof.circleimageview.CircleImageView
+                android:src="@drawable/exercise"
+                android:layout_width="60dp"
+                android:layout_height="55dp" />
+            <TextView
+                android:text="运动记录"
                 android:textSize="20dp"
                 android:textColor="#ffff"
                 android:layout_weight="1"

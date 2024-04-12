@@ -41,6 +41,7 @@ public class Fragment_wode extends Fragment {
     private LinearLayout lesson;
     private LinearLayout lyBanben;
     private LinearLayout message;
+    private LinearLayout exercise;
     @Nullable
     @Override
     public View onCreateView(@NonNull LayoutInflater inflater, @Nullable ViewGroup container, @Nullable Bundle savedInstanceState) {
@@ -58,6 +59,7 @@ public class Fragment_wode extends Fragment {
         lyBanben=view.findViewById(R.id.ly_banben);
         sign=view.findViewById(R.id.sign);
         message=view.findViewById(R.id.ly_send_message);
+        exercise=view.findViewById(R.id.ly_exercise);
         tuichu.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
@@ -84,7 +86,12 @@ public class Fragment_wode extends Fragment {
             }
         });
 
-
+        exercise.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                startActivity(new Intent(getActivity(), MessageActivity.class));
+            }
+        });
         String username = getArguments().getString("username");
         muser_name.setText(username);
 //        String phone = getArguments().getString("phone").replaceAll("(\\d{3})\\d{4}(\\d{4})","$1****$2");
