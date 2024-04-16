@@ -35,6 +35,7 @@ public class Fragment_dongtai extends Fragment {
     private LinearLayout updateLesson;
     private LinearLayout ly_addMember;
     private LinearLayout ly_addCoach;
+    private LinearLayout ly_addLessonAdmin;
     private LinearLayout ly_checkEquipment;
     private LinearLayout ly_checkNum;
     private LinearLayout ly_deleteMember;
@@ -68,6 +69,7 @@ public class Fragment_dongtai extends Fragment {
         if(role.equals("Admin")) {
             ly_addMember=view.findViewById(R.id.ly_addMember);
             ly_addCoach=view.findViewById(R.id.ly_addCoach);
+            ly_addLessonAdmin=view.findViewById(R.id.ly_addLessonAdmin);
             ly_checkEquipment=view.findViewById(R.id.ly_checkEquipment);
             ly_checkNum=view.findViewById(R.id.ly_checkNum);
             ly_deleteMember=view.findViewById(R.id.ly_deleteMember);
@@ -80,6 +82,12 @@ public class Fragment_dongtai extends Fragment {
                 }
             });
             ly_addCoach.setOnClickListener(new View.OnClickListener() {
+                @Override
+                public void onClick(View view) {
+                    startActivity(new Intent(getActivity(), AddCoachActivity.class));
+                }
+            });
+            ly_addLessonAdmin.setOnClickListener(new View.OnClickListener() {
                 @Override
                 public void onClick(View view) {
                     startActivity(new Intent(getActivity(), AddCoachActivity.class));
@@ -144,7 +152,6 @@ public class Fragment_dongtai extends Fragment {
             currentBook.setOnClickListener(new View.OnClickListener() {
                 @Override
                 public void onClick(View view) {
-
                     Intent intent = new Intent(getActivity(), TimeActivity.class);
                     intent.putExtra("time", "now");
                     startActivity(intent);
