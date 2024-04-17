@@ -23,7 +23,7 @@ public class CoachCheckMemberActivity extends AppCompatActivity{
         setContentView(R.layout.activity_student_list);
 //        getWindow().addFlags(WindowManager.LayoutParams.);
 //        getWindow().addFlags(WindowManager.LayoutParams.);
-        contact = findViewById(R.id.confirm);
+//        contact = findViewById(R.id.confirm);
         contact2 = findViewById(R.id.confirm2);
         contact2.setOnClickListener(new View.OnClickListener() {
             @Override
