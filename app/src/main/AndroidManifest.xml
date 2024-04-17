@@ -35,6 +35,7 @@
         <activity android:name=".TimeActivity"/>
         <activity android:name=".LessonActivity"/>
         <activity android:name=".ExerciseActivity"/>
+        <activity android:name=".GymInfoActivity"/>
         <activity android:name=".LoginActivity">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />

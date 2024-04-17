@@ -79,6 +79,13 @@
                     android:gravity="center"
                     android:layout_weight="1"
                     android:text="第155页"/>
+                <Button
+                    android:id="@+id/btn_send_message"
+                    android:layout_width="50dp"
+                    android:layout_height="match_parent"
+                    android:background="@drawable/buttonstyle"
+                    android:layout_weight="4"
+                    android:text="发消息"/>
                 <EditText
                     android:id="@+id/edt_yema"
                     android:layout_width="wrap_content"
@@ -91,10 +98,11 @@
                     android:textColor="#000"
                     android:textSize="19sp"
                     android:layout_weight="1"
-                    android:hint="输入页码"/>
+                    android:hint="页码"/>
+
                 <Button
                     android:id="@+id/btn_tiaozhuan"
-                    android:layout_width="100dp"
+                    android:layout_width="50dp"
                     android:layout_height="match_parent"
                     android:background="@drawable/buttonstyle"
                     android:layout_weight="4"

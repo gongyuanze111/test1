@@ -29,6 +29,7 @@ import com.android.volley.VolleyError;
 import com.android.volley.toolbox.JsonObjectRequest;
 import com.android.volley.toolbox.Volley;
 import com.bumptech.glide.Glide;
+import com.glc.itbook.MessageActivity;
 import com.glc.itbook.R;
 import com.glc.itbook.XiangQingActivity;
 import com.glc.itbook.bean.Book;
@@ -46,6 +47,7 @@ public class Fragment_index extends Fragment {
     private TextView tvNext;
     private EditText edtYeMa;
     private Button btnTiaozhuan;
+    private Button comment;
     private int page = 1;
     private TextView tvCurrentPage;
     private int totalPage;
@@ -69,7 +71,7 @@ public class Fragment_index extends Fragment {
         role = getArguments().getString("role");
         name = getArguments().getString("username");
         if(role.equals("Admin")) {
-            Toast.makeText(getActivity(), "健身房有XX器材待保修，请及时查看", Toast.LENGTH_LONG).show();
+            Toast.makeText(getActivity(), "健身房有XX器材待报修，请及时查看", Toast.LENGTH_LONG).show();
         }
         else if (role.equals("Coach")){
             Toast.makeText(getActivity(), "您的下一节课将于x小时x分钟后开始，请您做好准备。", Toast.LENGTH_LONG).show();
@@ -92,7 +94,7 @@ public class Fragment_index extends Fragment {
         btnTiaozhuan = view.findViewById(R.id.btn_tiaozhuan);
         bookName=view.findViewById(R.id.edt_bookName);
         souSuo=view.findViewById(R.id.btn_imgSousuo);
-
+        comment=view.findViewById(R.id.btn_post_comment);
 
 
 
@@ -168,6 +170,12 @@ public class Fragment_index extends Fragment {
 
             }
         });
+//        comment.setOnClickListener(new View.OnClickListener() {
+//            @Override
+//            public void onClick(View view) {
+//                startActivity(new Intent(getActivity(), MessageActivity.class));
+//            }
+//        });
 
     }
 

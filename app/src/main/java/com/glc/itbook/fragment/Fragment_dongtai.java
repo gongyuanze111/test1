@@ -20,6 +20,7 @@ import com.glc.itbook.BookActivity;
 import com.glc.itbook.CheckItemActivity;
 import com.glc.itbook.CoachCheckLessonActivity;
 import com.glc.itbook.CoachCheckMemberActivity;
+import com.glc.itbook.GymInfoActivity;
 import com.glc.itbook.LessonActivity;
 import com.glc.itbook.R;
 import com.glc.itbook.TimeActivity;
@@ -73,8 +74,8 @@ public class Fragment_dongtai extends Fragment {
             ly_addLessonAdmin=view.findViewById(R.id.ly_addLessonAdmin);
             ly_checkEquipment=view.findViewById(R.id.ly_checkEquipment);
             ly_checkNum=view.findViewById(R.id.ly_checkNum);
-            ly_deleteMember=view.findViewById(R.id.ly_deleteMember);
-            ly_deleteCoach=view.findViewById(R.id.ly_deleteCoach);
+//            ly_deleteMember=view.findViewById(R.id.ly_deleteMember);
+//            ly_deleteCoach=view.findViewById(R.id.ly_deleteCoach);
             ly_book=view.findViewById(R.id.ly_book);
             ly_addMember.setOnClickListener(new View.OnClickListener() {
                 @Override
@@ -103,21 +104,21 @@ public class Fragment_dongtai extends Fragment {
             ly_checkNum.setOnClickListener(new View.OnClickListener() {
                 @Override
                 public void onClick(View view) {
-                    startActivity(new Intent(getActivity(), TimeActivity.class));
+                    startActivity(new Intent(getActivity(), GymInfoActivity.class));
                 }
             });
-            ly_deleteMember.setOnClickListener(new View.OnClickListener() {
-                @Override
-                public void onClick(View view) {
-                    startActivity(new Intent(getActivity(), TimeActivity.class));
-                }
-            });
-            ly_deleteCoach.setOnClickListener(new View.OnClickListener() {
-                @Override
-                public void onClick(View view) {
-                    startActivity(new Intent(getActivity(), TimeActivity.class));
-                }
-            });
+//            ly_deleteMember.setOnClickListener(new View.OnClickListener() {
+//                @Override
+//                public void onClick(View view) {
+//                    startActivity(new Intent(getActivity(), TimeActivity.class));
+//                }
+//            });
+//            ly_deleteCoach.setOnClickListener(new View.OnClickListener() {
+//                @Override
+//                public void onClick(View view) {
+//                    startActivity(new Intent(getActivity(), TimeActivity.class));
+//                }
+//            });
             ly_book.setOnClickListener(new View.OnClickListener() {
                 @Override
                 public void onClick(View view) {

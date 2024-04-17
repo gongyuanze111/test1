@@ -92,41 +92,44 @@ public class TimeActivity extends AppCompatActivity{
         btn_choose.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-                int currentNum = 0;
-                Pattern pattern = Pattern.compile("\\d+");
-                String text = machine_num.getText().toString();
-                Matcher matcher = pattern.matcher(text);
-                currentNum = Integer.parseInt(matcher.group());
-                String url="http://10.0.2.2:8085/equipment/register";
-                JSONObject jsonObject = new JSONObject();
-                try {
-                    jsonObject.put("num", currentNum);
-                    jsonObject.put("username", "zhangsan");
-                    jsonObject.put("time", 1400);
-                    jsonObject.put("status", true);
-                } catch (JSONException e) {
-                    e.printStackTrace();
-                }
-                RequestQueue requestQueue = Volley.newRequestQueue(TimeActivity.this);
-                JsonObjectRequest jsonObjectRequest = new JsonObjectRequest(Request.Method.POST, url, jsonObject, new Response.Listener<JSONObject>() {
-                    @Override
-                    public void onResponse(JSONObject jsonObject) {
-                        try {
-                            String msg = jsonObject.getString("msg");
-                            if(msg.equals("预约成功")){
-                                Toast.makeText(TimeActivity.this, msg, Toast.LENGTH_SHORT).show();
-                            }
-                        } catch (Exception e) {
-                            e.printStackTrace();
-                        }
-                    }
-                }, new Response.ErrorListener() {
-                    @Override
-                    public void onErrorResponse(VolleyError volleyError) {
-                        Toast.makeText(TimeActivity.this, "预约出错", Toast.LENGTH_SHORT).show();
-                    }
-                });
-                requestQueue.add(jsonObjectRequest);
+                Toast.makeText(TimeActivity.this, "预约成功", Toast.LENGTH_SHORT).show();
+//
+
+//                int currentNum = 0;
+//                Pattern pattern = Pattern.compile("\\d+");
+//                String text = machine_num.getText().toString();
+//                Matcher matcher = pattern.matcher(text);
+//                currentNum = Integer.parseInt(matcher.group());
+//                String url="http://10.0.2.2:8085/equipment/register";
+//                JSONObject jsonObject = new JSONObject();
+//                try {
+//                    jsonObject.put("num", currentNum);
+//                    jsonObject.put("username", "zhangsan");
+//                    jsonObject.put("time", 1400);
+//                    jsonObject.put("status", true);
+//                } catch (JSONException e) {
+//                    e.printStackTrace();
+//                }
+//                RequestQueue requestQueue = Volley.newRequestQueue(TimeActivity.this);
+//                JsonObjectRequest jsonObjectRequest = new JsonObjectRequest(Request.Method.POST, url, jsonObject, new Response.Listener<JSONObject>() {
+//                    @Override
+//                    public void onResponse(JSONObject jsonObject) {
+//                        try {
+//                            String msg = jsonObject.getString("msg");
+//                            if(msg.equals("预约成功")){
+//                                Toast.makeText(TimeActivity.this, msg, Toast.LENGTH_SHORT).show();
+//                            }
+//                        } catch (Exception e) {
+//                            e.printStackTrace();
+//                        }
+//                    }
+//                }, new Response.ErrorListener() {
+//                    @Override
+//                    public void onErrorResponse(VolleyError volleyError) {
+//                        Toast.makeText(TimeActivity.this, "预约出错", Toast.LENGTH_SHORT).show();
+//                    }
+//                });
+//                requestQueue.add(jsonObjectRequest);
             }
         });
 

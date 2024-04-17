@@ -1,0 +1,111 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+<!--    tools:context=".UpdateActity">-->
+    <LinearLayout
+        android:layout_width="fill_parent"
+        android:layout_height="fill_parent"
+        android:orientation="vertical">
+
+        <LinearLayout
+            android:id="@+id/content"
+            android:layout_width="fill_parent"
+            android:layout_height="0dp"
+            android:layout_weight="1"
+            android:orientation="vertical">
+<!--            <ListView-->
+<!--                android:id="@+id/menu_list"-->
+<!--                android:layout_width="match_parent"-->
+<!--                android:layout_height="match_parent"></ListView>-->
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical">
+
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:text="场馆详情"
+                    android:gravity="center"
+                    android:textSize="40dp"
+                    android:background="@drawable/buttonstyle"/>
+
+
+
+                <TextView
+                    android:id="@+id/exercise_info"
+                    android:layout_width="match_parent"
+                    android:layout_height="250dp"
+                    android:gravity="center"
+                    android:padding="8dp"
+                    android:textSize="23dp"
+                    android:text="在过去30天内，共有xx名会员新加入，xx名会员上课，课次为xx次。健身房日均人流量为xx，平均健身xx分钟。" />
+                <ImageView
+                    android:layout_width="match_parent"
+                    android:layout_height="200dp"
+                    android:src="@drawable/exercise"
+                    ></ImageView>
+                <TextView
+                    android:id="@+id/chickenSoup1"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:gravity="center"
+                    android:padding="8dp"
+                    android:textSize="30dp"
+                    android:text="坚持和努力是成功的双翼，" />
+                <TextView
+                    android:id="@+id/chickenSoup2"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:gravity="center"
+                    android:padding="8dp"
+                    android:textSize="30dp"
+                    android:text="梦想和勇气是飞翔的引擎。" />
+
+
+            </LinearLayout>
+
+
+        </LinearLayout>
+
+<!--        <LinearLayout-->
+<!--            android:layout_width="fill_parent"-->
+<!--            android:layout_height="wrap_content"-->
+<!--            android:gravity="bottom"-->
+<!--            android:orientation="horizontal">-->
+<!--            <TextView-->
+<!--                android:id="@+id/tv_shangye"-->
+<!--                android:layout_width="match_parent"-->
+<!--                android:layout_height="50dp"-->
+<!--                android:layout_weight="1"-->
+<!--                android:gravity="center"-->
+<!--                android:background="@drawable/buttonstyle"-->
+<!--                android:text="上一页"/>-->
+<!--            <LinearLayout-->
+<!--                android:layout_width="match_parent"-->
+<!--                android:layout_height="match_parent"-->
+<!--                android:layout_weight="0.5">-->
+<!--                <TextView-->
+<!--                    android:id="@+id/tv_currentPage"-->
+<!--                    android:layout_width="70dp"-->
+<!--                    android:layout_height="match_parent"-->
+<!--                    android:gravity="center"-->
+<!--                    android:layout_weight="1"-->
+<!--                    android:text="第1页"/>-->
+<!--            </LinearLayout>-->
+<!--            <TextView-->
+<!--                android:id="@+id/tv_next"-->
+<!--                android:layout_width="match_parent"-->
+<!--                android:layout_height="50dp"-->
+<!--                android:layout_weight="1"-->
+<!--                android:gravity="center"-->
+<!--                android:background="@drawable/buttonstyle"-->
+<!--                android:text="下一页"/>-->
+<!--        </LinearLayout>-->
+    </LinearLayout>
+
+
+</LinearLayout>

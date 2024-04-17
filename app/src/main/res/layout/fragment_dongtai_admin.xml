@@ -96,40 +96,40 @@
                 android:textSize="25sp"
                 android:text="查看信息"/>
         </LinearLayout>
-        <LinearLayout
-            android:id="@+id/ly_deleteMember"
-            android:layout_width="wrap_content"
-            android:layout_marginBottom="20dp"
-            android:layout_height="60dp">
-            <ImageView
-                android:layout_width="60dp"
-                android:layout_height="match_parent"
-                android:src="@drawable/me"/>
-            <TextView
-                android:layout_width="wrap_content"
-                android:layout_height="60dp"
-                android:gravity="center"
-                android:background="@drawable/buttonstyle"
-                android:textSize="25sp"
-                android:text="删除会员"/>
-        </LinearLayout>
-        <LinearLayout
-            android:id="@+id/ly_deleteCoach"
-            android:layout_width="wrap_content"
-            android:layout_marginBottom="20dp"
-            android:layout_height="60dp">
-            <ImageView
-                android:layout_width="60dp"
-                android:layout_height="match_parent"
-                android:src="@drawable/me"/>
-            <TextView
-                android:layout_width="wrap_content"
-                android:layout_height="60dp"
-                android:gravity="center"
-                android:background="@drawable/buttonstyle"
-                android:textSize="25sp"
-                android:text="删除教练"/>
-        </LinearLayout>
+<!--        <LinearLayout-->
+<!--            android:id="@+id/ly_deleteMember"-->
+<!--            android:layout_width="wrap_content"-->
+<!--            android:layout_marginBottom="20dp"-->
+<!--            android:layout_height="60dp">-->
+<!--            <ImageView-->
+<!--                android:layout_width="60dp"-->
+<!--                android:layout_height="match_parent"-->
+<!--                android:src="@drawable/me"/>-->
+<!--            <TextView-->
+<!--                android:layout_width="wrap_content"-->
+<!--                android:layout_height="60dp"-->
+<!--                android:gravity="center"-->
+<!--                android:background="@drawable/buttonstyle"-->
+<!--                android:textSize="25sp"-->
+<!--                android:text="删除会员"/>-->
+<!--        </LinearLayout>-->
+<!--        <LinearLayout-->
+<!--            android:id="@+id/ly_deleteCoach"-->
+<!--            android:layout_width="wrap_content"-->
+<!--            android:layout_marginBottom="20dp"-->
+<!--            android:layout_height="60dp">-->
+<!--            <ImageView-->
+<!--                android:layout_width="60dp"-->
+<!--                android:layout_height="match_parent"-->
+<!--                android:src="@drawable/me"/>-->
+<!--            <TextView-->
+<!--                android:layout_width="wrap_content"-->
+<!--                android:layout_height="60dp"-->
+<!--                android:gravity="center"-->
+<!--                android:background="@drawable/buttonstyle"-->
+<!--                android:textSize="25sp"-->
+<!--                android:text="删除教练"/>-->
+<!--        </LinearLayout>-->
         <LinearLayout
             android:id="@+id/ly_book"
             android:layout_width="wrap_content"

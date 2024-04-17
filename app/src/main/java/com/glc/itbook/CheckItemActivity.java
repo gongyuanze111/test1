@@ -20,6 +20,8 @@ import org.json.JSONObject;
 
 import java.util.regex.Matcher;
 import java.util.regex.Pattern;
+import android.app.AlertDialog;
+import android.content.DialogInterface;
 
 public class CheckItemActivity extends AddCoachActivity{
     private ImageView dumbbell;
@@ -65,13 +67,14 @@ public class CheckItemActivity extends AddCoachActivity{
         machine_num.setText("2号机械已损坏，修复完成后再次点击");
 //        bug
         btn_choose = findViewById(R.id.buttonChooseEquipment);
+//        btn_choose.setVisibility(View.INVISIBLE);
         machine.setVisibility(View.INVISIBLE);
         machine_clicked.setVisibility(View.VISIBLE);
-        machine.setOnClickListener(new View.OnClickListener() {
+        machine_clicked.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view){
-                machine.setVisibility(View.VISIBLE);
-                machine_clicked.setVisibility(View.INVISIBLE);
+//                machine.setVisibility(View.VISIBLE);
+//                machine_clicked.setVisibility(View.INVISIBLE);
                 String text = machine_num.getText().toString();
                 int currentNum = 0;
                 Pattern pattern = Pattern.compile("\\d+");
@@ -79,7 +82,7 @@ public class CheckItemActivity extends AddCoachActivity{
                 if (matcher.find()) {
                     currentNum = Integer.parseInt(matcher.group());
                     currentNum --;
-                    machine_num.setText("已修复，剩余 " + currentNum + " 个");
+                    machine_num.setText("修复了 " + currentNum + " 个机器");
 
                 }
             };
@@ -88,41 +91,59 @@ public class CheckItemActivity extends AddCoachActivity{
         btn_choose.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-                int currentNum = 0;
-                Pattern pattern = Pattern.compile("\\d+");
-                String text = machine_num.getText().toString();
-                Matcher matcher = pattern.matcher(text);
-                currentNum = Integer.parseInt(matcher.group());
-                String url="http://10.0.2.2:8085/equipment/register";
-                JSONObject jsonObject = new JSONObject();
-                try {
-                    jsonObject.put("num", currentNum);
-                    jsonObject.put("username", "zhangsan");
-                    jsonObject.put("time", 1400);
-                    jsonObject.put("status", true);
-                } catch (JSONException e) {
-                    e.printStackTrace();
-                }
-                RequestQueue requestQueue = Volley.newRequestQueue(CheckItemActivity.this);
-                JsonObjectRequest jsonObjectRequest = new JsonObjectRequest(Request.Method.POST, url, jsonObject, new Response.Listener<JSONObject>() {
-                    @Override
-                    public void onResponse(JSONObject jsonObject) {
-                        try {
-                            String msg = jsonObject.getString("msg");
-                            if(msg.equals("预约成功")){
-                                Toast.makeText(CheckItemActivity.this, msg, Toast.LENGTH_SHORT).show();
+                AlertDialog.Builder builder = new AlertDialog.Builder(CheckItemActivity.this);
+                builder.setMessage("确认修复？")
+                        .setPositiveButton("确认", new DialogInterface.OnClickListener() {
+                            public void onClick(DialogInterface dialog, int id) {
+                                machine.setVisibility(View.VISIBLE);
+                                machine_clicked.setVisibility(View.INVISIBLE);
+                                machine_num.setText("已修复");
                             }
-                        } catch (Exception e) {
-                            e.printStackTrace();
-                        }
-                    }
-                }, new Response.ErrorListener() {
-                    @Override
-                    public void onErrorResponse(VolleyError volleyError) {
-                        Toast.makeText(CheckItemActivity.this, "预约出错", Toast.LENGTH_SHORT).show();
-                    }
-                });
-                requestQueue.add(jsonObjectRequest);
+                        })
+                        .setNegativeButton("取消", new DialogInterface.OnClickListener() {
+                            public void onClick(DialogInterface dialog, int id) {
+                                machine_num.setText("2号机械已损坏，修复完成后再次点击");
+                            }
+                        });
+
+                // 创建并显示对话框
+                AlertDialog alertDialog = builder.create();
+                alertDialog.show();
+//                int currentNum = 0;
+//                Pattern pattern = Pattern.compile("\\d+");
+//                String text = machine_num.getText().toString();
+//                Matcher matcher = pattern.matcher(text);
+//                currentNum = Integer.parseInt(matcher.group());
+//                String url="http://10.0.2.2:8085/equipment/register";
+//                JSONObject jsonObject = new JSONObject();
+//                try {
+//                    jsonObject.put("num", currentNum);
+//                    jsonObject.put("username", "zhangsan");
+//                    jsonObject.put("time", 1400);
+//                    jsonObject.put("status", true);
+//                } catch (JSONException e) {
+//                    e.printStackTrace();
+//                }
+//                RequestQueue requestQueue = Volley.newRequestQueue(CheckItemActivity.this);
+//                JsonObjectRequest jsonObjectRequest = new JsonObjectRequest(Request.Method.POST, url, jsonObject, new Response.Listener<JSONObject>() {
+//                    @Override
+//                    public void onResponse(JSONObject jsonObject) {
+//                        try {
+//                            String msg = jsonObject.getString("msg");
+//                            if(msg.equals("预约成功")){
+//                                Toast.makeText(CheckItemActivity.this, msg, Toast.LENGTH_SHORT).show();
+//                            }
+//                        } catch (Exception e) {
+//                            e.printStackTrace();
+//                        }
+//                    }
+//                }, new Response.ErrorListener() {
+//                    @Override
+//                    public void onErrorResponse(VolleyError volleyError) {
+//                        Toast.makeText(CheckItemActivity.this, "预约出错", Toast.LENGTH_SHORT).show();
+//                    }
+//                });
+//                requestQueue.add(jsonObjectRequest);
             }
         });
 
