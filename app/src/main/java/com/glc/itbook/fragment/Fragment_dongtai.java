@@ -15,6 +15,7 @@ import androidx.fragment.app.Fragment;
 
 import com.glc.itbook.AddActivity;
 import com.glc.itbook.AddCoachActivity;
+import com.glc.itbook.AddLessonActivity;
 import com.glc.itbook.BookActivity;
 import com.glc.itbook.CheckItemActivity;
 import com.glc.itbook.CoachCheckLessonActivity;
@@ -90,7 +91,7 @@ public class Fragment_dongtai extends Fragment {
             ly_addLessonAdmin.setOnClickListener(new View.OnClickListener() {
                 @Override
                 public void onClick(View view) {
-                    startActivity(new Intent(getActivity(), AddCoachActivity.class));
+                    startActivity(new Intent(getActivity(), AddLessonActivity.class));
                 }
             });
             ly_checkEquipment.setOnClickListener(new View.OnClickListener() {
