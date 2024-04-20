@@ -60,7 +60,7 @@ public class TimeActivity extends AppCompatActivity{
     private Button btn_choose;
     private TextView time_1420;
     private TextView time_1800;
-    private void switchToEquipmentLayout(){
+    private void switchToEquipmentLayout(String time){
         setContentView(R.layout.activity_equipment_layout);
         //透明状态栏          
         getWindow().addFlags(WindowManager.LayoutParams.FLAG_TRANSLUCENT_STATUS);
@@ -70,7 +70,18 @@ public class TimeActivity extends AppCompatActivity{
         machine_clicked = findViewById(R.id.machine_clicked);
         machine_num = findViewById(R.id.machine_num);
         btn_choose = findViewById(R.id.buttonChooseEquipment);
+        if (time.equals("now"))
+        {
+            resistance_band_num=findViewById(R.id.resistance_band_num);
+            resistance_band_num.setText("剩余 7 个");
+            dumbbell_num=findViewById(R.id.dumbbell_num);
+            dumbbell_num.setText("剩余 1 个");
 
+            treadmill_num=findViewById(R.id.treadmill_num);
+            treadmill_num.setText("剩余 8 个");
+            exercisebike_num=findViewById(R.id.exercisebike_num);
+            exercisebike_num.setText("剩余 4 个");
+        }
         machine.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view){
@@ -139,7 +150,7 @@ public class TimeActivity extends AppCompatActivity{
         super.onCreate(savedInstanceState);
         String time = getIntent().getStringExtra("time");
         if (time.equals("now")) {
-            switchToEquipmentLayout();
+            switchToEquipmentLayout("now");
         }
         else {
             setContentView(R.layout.activity_time_list);
@@ -150,7 +161,7 @@ public class TimeActivity extends AppCompatActivity{
             time_1420.setOnClickListener(new View.OnClickListener() {
                 @Override
                 public void onClick(View view) {
-                    switchToEquipmentLayout();
+                    switchToEquipmentLayout("future");
                 }
             });
         }

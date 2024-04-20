@@ -122,7 +122,7 @@
                                     android:layout_height="wrap_content"
                                     android:ellipsize="end"
                                     android:gravity="center_vertical"
-                                    android:text="下次上课时间：4天后"
+                                    android:text="下次上课时间：今天17：00"
                                     android:textSize="23sp" />
 
 
@@ -171,7 +171,7 @@
                                     android:ellipsize="end"
                                     android:gravity="center_vertical"
                                     android:maxLines="1"
-                                    android:text="李四"
+                                    android:text="吕斯晨"
                                     android:textSize="23sp" />
 
                                 <TextView
@@ -196,7 +196,7 @@
                                     android:layout_height="wrap_content"
                                     android:ellipsize="end"
                                     android:gravity="center_vertical"
-                                    android:text="下次上课时间：未预约"
+                                    android:text="下次上课时间：今天15：00"
                                     android:textSize="23sp" />
                             </LinearLayout>
                         </LinearLayout>
@@ -240,7 +240,7 @@
                                 android:ellipsize="end"
                                 android:gravity="center_vertical"
                                 android:maxLines="1"
-                                android:text="M3"
+                                android:text="王五"
                                 android:textSize="23sp" />
 
                             <TextView
@@ -265,7 +265,7 @@
                                 android:layout_height="wrap_content"
                                 android:ellipsize="end"
                                 android:gravity="center_vertical"
-                                android:text="下次上课时间：未预约"
+                                android:text="下次上课时间：今天21：00"
                                 android:textSize="23sp" />
                         </LinearLayout>
                     </LinearLayout>
@@ -447,7 +447,7 @@
                                 android:ellipsize="end"
                                 android:gravity="center_vertical"
                                 android:maxLines="1"
-                                android:text="李四"
+                                android:text="黎姐"
                                 android:textSize="23sp" />
 
                             <TextView
@@ -515,7 +515,7 @@
                     android:layout_height="match_parent"
                     android:gravity="center"
                     android:layout_weight="1"
-                    android:text="第2页"/>
+                    android:text="第1页"/>
             </LinearLayout>
             <TextView
                 android:id="@+id/tv_next"

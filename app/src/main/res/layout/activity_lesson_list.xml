@@ -73,7 +73,7 @@
                     android:gravity="center"
                     android:padding="8dp"
                     android:textSize="20dp"
-                    android:text="10：00-11：00 张三" />
+                    android:text="15：00-16：00 吕斯晨" />
                 <TextView
                     android:id="@+id/lesson2"
                     android:layout_width="match_parent"
@@ -82,7 +82,7 @@
                     android:gravity="center"
                     android:padding="8dp"
                     android:textSize="20dp"
-                    android:text="14：00-15：00 李四" />
+                    android:text="17：00-18：00 张三" />
                 <TextView
                     android:id="@+id/lesson3"
                     android:layout_width="match_parent"
@@ -91,7 +91,7 @@
                     android:gravity="center"
                     android:padding="8dp"
                     android:textSize="20dp"
-                    android:text="18：00-19：00 王五" />
+                    android:text="21：00-22：00 王五" />
 
 
             </LinearLayout>

@@ -53,7 +53,7 @@ public class MessageActivity extends AppCompatActivity {
             public void onClick(View view) {
                 String name = addName.getText().toString();
                 String img = addimg.getText().toString();
-                String author= "大宝";
+                String author= "吕斯晨";
                 String info = addInfo.getText().toString();
                 String lianjie = addLianjie.getText().toString();
                 if(name.equals("")||img.equals("")||author.equals("")||info.equals("")){

@@ -256,7 +256,7 @@
                     android:layout_height="match_parent"
                     android:gravity="center"
                     android:layout_weight="1"
-                    android:text="第2页"/>
+                    android:text="第1页"/>
             </LinearLayout>
             <TextView
                 android:id="@+id/tv_next"

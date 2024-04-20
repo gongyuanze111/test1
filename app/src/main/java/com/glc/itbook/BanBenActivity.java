@@ -33,17 +33,25 @@ private Button signup;
             @Override
             public void onClick(View view) {
                 if (username.equals("Member1")) {
-                    setContentView(R.layout.activity_signup);
-                    signup = findViewById(R.id.equipmentSign);
+//                    setContentView(R.layout.activity_signup);
+//                    signup = findViewById(R.id.equipmentSign);
 //                    signup.setText("签到");
-
+                    setContentView(R.layout.activity_signup_2);
+                    signup = findViewById(R.id.lessonSign);
                     signup.setOnClickListener(new View.OnClickListener() {
                         @Override
                         public void onClick(View view1) {
-                            Toast.makeText(BanBenActivity.this, "签到成功！积分+3", Toast.LENGTH_SHORT).show();
+                            Toast.makeText(BanBenActivity.this, "签到成功！积分+5", Toast.LENGTH_SHORT).show();
                             signup.setText("已签到");
                         }
                     });
+//                    signup.setOnClickListener(new View.OnClickListener() {
+//                        @Override
+//                        public void onClick(View view1) {
+//                            Toast.makeText(BanBenActivity.this, "签到成功！积分+3", Toast.LENGTH_SHORT).show();
+//                            signup.setText("已签到");
+//                        }
+//                    });
                 } else if (username.equals("Member2")) {
                     setContentView(R.layout.activity_signup_2);
                     signup = findViewById(R.id.lessonSign);

@@ -42,7 +42,7 @@
                     android:gravity="center"
                     android:padding="8dp"
                     android:textSize="23dp"
-                    android:text="在过去30天内，共有xx名会员新加入，xx名会员上课，课次为xx次。健身房日均人流量为xx，平均健身xx分钟。" />
+                    android:text="在过去30天内，共有34名会员新加入，16名会员上课，课次为33次。健身房日均人流量为129，平均健身33分钟。" />
                 <ImageView
                     android:layout_width="match_parent"
                     android:layout_height="200dp"

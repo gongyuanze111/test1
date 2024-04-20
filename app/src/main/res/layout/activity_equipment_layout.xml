@@ -57,7 +57,7 @@
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:layout_gravity="center"
-                android:text="剩余 5 个"
+                android:text="剩余 3 个"
                 android:textSize="12sp"
                 android:gravity="center"/>
 
@@ -93,7 +93,7 @@
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:layout_gravity="center"
-                android:text="剩余 5 个"
+                android:text="剩余 6 个"
                 android:textSize="12sp"
                 android:gravity="center"/>
 
@@ -129,7 +129,7 @@
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:layout_gravity="center"
-                android:text="剩余 5 个"
+                android:text="剩余 2 个"
                 android:textSize="12sp"
                 android:gravity="center"/>
 
@@ -165,7 +165,7 @@
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:layout_gravity="center"
-                android:text="剩余 5 个"
+                android:text="剩余 1 个"
                 android:textSize="12sp"
                 android:gravity="center"/>
 
@@ -201,7 +201,7 @@
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:layout_gravity="center"
-                android:text="剩余 5 个"
+                android:text="剩余 2 个"
                 android:textSize="12sp"
                 android:gravity="center"/>
 

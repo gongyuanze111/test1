@@ -71,14 +71,16 @@ public class Fragment_index extends Fragment {
         role = getArguments().getString("role");
         name = getArguments().getString("username");
         if(role.equals("Admin")) {
-            Toast.makeText(getActivity(), "健身房有XX器材待报修，请及时查看", Toast.LENGTH_LONG).show();
+            Toast.makeText(getActivity(), "健身房有龙门架待报修，请及时查看", Toast.LENGTH_LONG).show();
         }
         else if (role.equals("Coach")){
-            Toast.makeText(getActivity(), "您的下一节课将于x小时x分钟后开始，请您做好准备。", Toast.LENGTH_LONG).show();
+//            Toast.makeText(getActivity(), "您14:20的预约即将开始，请尽快前往健身", Toast.LENGTH_LONG).show();
+            Toast.makeText(getActivity(), "您的下一节课将于15:00开始，请您做好准备。", Toast.LENGTH_LONG).show();
         }
         else {
             if (name.equals("Member1"))
-                Toast.makeText(getActivity(), "您今日有18:00开始的预约，请及时前往健身", Toast.LENGTH_LONG).show();
+//                Toast.makeText(getActivity(), "您尚未开始预约，运动起来吧！", Toast.LENGTH_LONG).show();
+                Toast.makeText(getActivity(), "您有王鹏教练15:00开始的课程，请及时前往健身房", Toast.LENGTH_LONG).show();
             else if (name.equals("Member2"))
                 Toast.makeText(getActivity(), "您14:20的预约即将开始，请尽快前往健身", Toast.LENGTH_LONG).show();
             else if (name.equals("Member3"))

@@ -81,7 +81,7 @@ private Button submit;
                                 Toast.makeText(RegistActivity.this, msg, Toast.LENGTH_SHORT).show();
                                 if(msg.equals("注册成功")){
                                     JSONObject detail = jsonObject.getJSONObject("detail");
-                                   final String username_login = detail.getString("username");
+                                    final String username_login = detail.getString("username");
                                     goLogin.setOnClickListener(new View.OnClickListener() {
                                         @Override
                                         public void onClick(View view) {

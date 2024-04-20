@@ -5,6 +5,7 @@ import android.os.Bundle;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
+import android.widget.EditText;
 import android.widget.LinearLayout;
 import android.widget.ListView;
 import android.widget.Toast;
@@ -16,6 +17,7 @@ import androidx.fragment.app.Fragment;
 import com.glc.itbook.AddActivity;
 import com.glc.itbook.AddCoachActivity;
 import com.glc.itbook.AddLessonActivity;
+import com.glc.itbook.AddPasswordActivity;
 import com.glc.itbook.BookActivity;
 import com.glc.itbook.CheckItemActivity;
 import com.glc.itbook.CoachCheckLessonActivity;
@@ -44,6 +46,7 @@ public class Fragment_dongtai extends Fragment {
     private LinearLayout ly_deleteCoach;
     private LinearLayout ly_deleteComment;
     private LinearLayout ly_book;
+    private LinearLayout password;
 
     private LinearLayout coachCheckLesson;
     private LinearLayout coachCheckMember;
@@ -76,7 +79,14 @@ public class Fragment_dongtai extends Fragment {
             ly_checkNum=view.findViewById(R.id.ly_checkNum);
 //            ly_deleteMember=view.findViewById(R.id.ly_deleteMember);
 //            ly_deleteCoach=view.findViewById(R.id.ly_deleteCoach);
+            password=view.findViewById(R.id.ly_password);
             ly_book=view.findViewById(R.id.ly_book);
+            password.setOnClickListener(new View.OnClickListener() {
+                @Override
+                public void onClick(View view) {
+                    startActivity(new Intent(getActivity(), AddPasswordActivity.class));
+                }
+            });
             ly_addMember.setOnClickListener(new View.OnClickListener() {
                 @Override
                 public void onClick(View view) {

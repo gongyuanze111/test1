@@ -42,7 +42,7 @@
                     android:gravity="center"
                     android:padding="8dp"
                     android:textSize="23dp"
-                    android:text="您在过去30天内，总计运动了xx分钟，其中哑铃区xx分钟、跑步机xx分钟、单车xx分钟、瑜伽垫xx分钟、龙门架xx分钟、固定器械xx分钟、课程xx分钟、共计消耗约XXX大卡。
+                    android:text="您在过去30天内，总计运动了342分钟，其中哑铃区75分钟、跑步机45分钟、单车82分钟、瑜伽垫53分钟、龙门架34分钟、固定器械42分钟、课程60分钟、共计消耗约10345大卡。
 超过了98%的用户。" />
                 <ImageView
                     android:layout_width="match_parent"
